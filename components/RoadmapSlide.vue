@@ -65,7 +65,7 @@ function accentStyle(block: RoadmapTextBlock) {
 <template>
   <section class="roadmap-stage">
     <img class="reference-image" :src="`./img/${slide.id}.png`" :alt="`Roadmap reference ${slide.id}`" />
-    <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#08c7e8" />
+    <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#7c3aed" />
 
     <div class="chrome-mask roadmap-title-mask" />
     <div class="chrome-mask incubator-logo-mask" />

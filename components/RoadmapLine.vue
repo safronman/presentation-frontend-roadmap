@@ -17,7 +17,7 @@ const animationKey = computed(() => `line-${props.slideId}`)
       :key="animationKey"
       :d="path"
       fill="none"
-      :stroke="color ?? '#08c7e8'"
+      :stroke="color ?? '#7c3aed'"
       stroke-width="5"
       stroke-linecap="round"
       stroke-dasharray="24 18"
