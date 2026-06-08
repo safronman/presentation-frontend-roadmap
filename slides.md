@@ -2,66 +2,46 @@
 theme: seriph
 title: Frontend Roadmap
 info: |
-  Frontend roadmap presentation.
+  Editable frontend roadmap presentation.
 drawings:
   persist: false
 transition: fade
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/1.png" alt="Slide 1" />
-</div>
+<RoadmapSlide :id="1" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/2.png" alt="Slide 2" />
-</div>
+<RoadmapSlide :id="2" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/3.png" alt="Slide 3" />
-</div>
+<RoadmapSlide :id="3" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/4.png" alt="Slide 4" />
-</div>
+<RoadmapSlide :id="4" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/5.png" alt="Slide 5" />
-</div>
+<RoadmapSlide :id="5" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/6.png" alt="Slide 6" />
-</div>
+<RoadmapSlide :id="6" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/7.png" alt="Slide 7" />
-</div>
+<RoadmapSlide :id="7" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/8.png" alt="Slide 8" />
-</div>
+<RoadmapSlide :id="8" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/9.png" alt="Slide 9" />
-</div>
+<RoadmapSlide :id="9" />
 
 ---
 
-<div class="absolute inset-0 flex items-center justify-center bg-black">
-  <img class="w-full h-full object-contain" src="./img/10.png" alt="Slide 10" />
-</div>
+<RoadmapSlide :id="10" />
