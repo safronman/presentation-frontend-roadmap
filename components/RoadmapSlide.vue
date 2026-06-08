@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import RoadmapLine from './RoadmapLine.vue'
 import { roadmapSlides, type RoadmapIcon, type RoadmapTextBlock } from './roadmapSlides'
 
 const props = defineProps<{
@@ -64,6 +65,7 @@ function accentStyle(block: RoadmapTextBlock) {
 <template>
   <section class="roadmap-stage">
     <img class="reference-image" :src="`./img/${slide.id}.png`" :alt="`Roadmap reference ${slide.id}`" />
+    <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#08c7e8" />
 
     <div class="chrome-mask roadmap-title-mask" />
     <div class="chrome-mask incubator-logo-mask" />

@@ -5,6 +5,7 @@ import { motion } from 'motion-v'
 const props = defineProps<{
   path: string
   slideId: number
+  color?: string
 }>()
 
 const animationKey = computed(() => `line-${props.slideId}`)
@@ -16,13 +17,13 @@ const animationKey = computed(() => `line-${props.slideId}`)
       :key="animationKey"
       :d="path"
       fill="none"
-      stroke="#050505"
-      stroke-width="6"
+      :stroke="color ?? '#08c7e8'"
+      stroke-width="5"
       stroke-linecap="round"
-      stroke-dasharray="28 22"
-      :initial="{ pathLength: 0, opacity: 0.2 }"
-      :animate="{ pathLength: 1, opacity: 1 }"
-      :transition="{ duration: 1.35, ease: 'easeInOut' }"
+      stroke-dasharray="24 18"
+      :initial="{ strokeDashoffset: 42, opacity: 0.25 }"
+      :animate="{ strokeDashoffset: 0, opacity: 1 }"
+      :transition="{ duration: 1.2, ease: 'easeInOut' }"
     />
   </svg>
 </template>
@@ -34,6 +35,6 @@ const animationKey = computed(() => `line-${props.slideId}`)
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 </style>
