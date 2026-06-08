@@ -9,6 +9,7 @@
     "screenshots": "playwright test tests/roadmap-screenshots.spec.ts"
   },
   "dependencies": {
+    "@iconify/vue": "^5.0.1",
     "@slidev/cli": "^52.16.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
