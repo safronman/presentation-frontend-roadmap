@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+dist
+*.local
+*.log
+.env
+.env.*
+!.env.example
+.vite-inspect
+.remote-assets
+.slidev
+slides-export.*
+components.d.ts
+/.idea
