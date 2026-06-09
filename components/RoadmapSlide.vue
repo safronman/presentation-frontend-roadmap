@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { Icon } from '@iconify/vue'
 import RoadmapLine from './RoadmapLine.vue'
 import { roadmapSlides, type RoadmapIcon, type RoadmapTextBlock } from './roadmapSlides'
 
@@ -30,28 +31,16 @@ function blockStyle(block: RoadmapTextBlock) {
   }
 }
 
-function maskStyle(block: RoadmapTextBlock) {
-  const height = block.items?.length
-    ? 90 + block.items.length * (block.size === 'sm' ? 38 : 46)
-    : block.size === 'lg'
-      ? 88
-      : 70
-
-  return {
-    left: xPct(Math.max(0, block.x - 36)),
-    top: yPct(Math.max(0, block.y - 22)),
-    width: xPct(block.w + 92),
-    height: `${height / 10.8}%`,
-  }
-}
-
 function iconStyle(icon: RoadmapIcon) {
+  const color = icon.color ?? '#111'
+
   return {
     left: xPct(icon.x),
     top: yPct(icon.y),
     width: xPct(icon.w),
     height: `${icon.h / 10.8}%`,
-    '--icon-color': icon.color ?? '#111',
+    '--icon-color': color,
+    '--icon-symbol-color': icon.iconColor ?? color,
   }
 }
 
@@ -60,26 +49,64 @@ function accentStyle(block: RoadmapTextBlock) {
     backgroundColor: block.accent ?? '#555',
   }
 }
+
+const avatarIcons: Record<number, string> = {
+  1: 'ph:rocket-launch',
+  2: 'ph:student',
+  3: 'ph:routes',
+  4: 'ph:database',
+  5: 'ph:shield-check',
+  6: 'ph:gauge',
+  7: 'ph:git-branch',
+  8: 'ph:tree-structure',
+  9: 'ph:sparkle',
+  10: 'ph:flag-checkered',
+}
+
+const roadmapIconNames: Record<string, string> = {
+  HTML5: 'ph:file-html',
+  CSS: 'ph:file-css',
+  React: 'ph:atom',
+  useState: 'ph:toggle-left',
+  TS: 'ph:brackets-curly',
+  Data: 'ph:database',
+  'React Router': 'ph:map-trifold',
+  MUI: 'ph:diamonds-four',
+  Flow: 'ph:flow-arrow',
+  S: 'ph:book-open-text',
+  'Redux Toolkit': 'ph:stack',
+  VITEST: 'ph:test-tube',
+  AJAX: 'ph:cloud-arrow-down',
+  WS: 'logos:websocket',
+  'React Hook Form + Zod': 'ph:checks',
+  Login: 'ph:sign-in',
+  'RTK Query': 'ph:database',
+  'TanStack + Zustand': 'ph:tree-structure',
+  '+ ESLint': 'ph:code-block',
+  JavaScript: 'ph:file-js',
+  Git: 'ph:git-branch',
+  GitHub: 'ph:github-logo',
+  Architecture: 'ph:blueprint',
+  'Next.js': 'ph:globe-hemisphere-west',
+  AI: 'ph:sparkle',
+  DEVOPS: 'ph:infinity',
+  Security: 'ph:shield-check',
+  Team: 'ph:users-three',
+  Backend: 'ph:server',
+  Finish: 'ph:flag-checkered',
+}
+
+function iconName(icon: RoadmapIcon) {
+  return icon.icon ?? roadmapIconNames[icon.label] ?? 'ph:code'
+}
 </script>
 
 <template>
   <section class="roadmap-stage">
-    <img class="reference-image" :src="`./img/${slide.id}.png`" :alt="`Roadmap reference ${slide.id}`" />
     <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#7c3aed" />
 
-    <div class="chrome-mask roadmap-title-mask" />
-    <div class="chrome-mask incubator-logo-mask" />
-    <div v-if="slide.level" class="chrome-mask level-mask" />
-
-    <div
-      v-for="block in slide.blocks"
-      :key="`${block.title}-mask`"
-      class="text-mask"
-      :style="maskStyle(block)"
-    />
-
     <div v-if="slide.avatar" class="avatar-panel" :style="{ backgroundColor: slide.avatarColor }">
-      <span>{{ slide.avatar }}</span>
+      <Icon class="avatar-icon" :icon="avatarIcons[slide.id] ?? 'ph:rocket-launch'" />
     </div>
 
     <div v-if="slide.level" class="level-label">
@@ -93,6 +120,7 @@ function accentStyle(block: RoadmapTextBlock) {
       :class="[`icon-${icon.kind ?? 'badge'}`]"
       :style="iconStyle(icon)"
     >
+      <Icon class="roadmap-icon-symbol" :icon="iconName(icon)" />
       <span>{{ icon.label }}</span>
     </div>
 
@@ -117,55 +145,32 @@ function accentStyle(block: RoadmapTextBlock) {
 
 <style scoped>
 .roadmap-stage {
+  --roadmap-bg: #fff;
+  --roadmap-text: #050505;
+  --roadmap-muted: #858585;
+  --roadmap-level: #808080;
+  --roadmap-icon-bg: color-mix(in srgb, var(--icon-color) 12%, var(--roadmap-bg));
+  --roadmap-icon-border: color-mix(in srgb, var(--icon-color) 34%, transparent);
+  --roadmap-icon-shadow: rgb(0 0 0 / 0.08);
+
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background: #fff;
-  color: #050505;
+  background: var(--roadmap-bg);
+  color: var(--roadmap-text);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8.2px;
   line-height: 1.15;
 }
 
-.reference-image,
-.chrome-mask,
-.text-mask {
-  position: absolute;
-}
-
-.reference-image {
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.chrome-mask,
-.text-mask {
-  z-index: 1;
-  background: #fff;
-}
-
-.roadmap-title-mask {
-  left: 4.6%;
-  top: 4%;
-  width: 17%;
-  height: 7.2%;
-}
-
-.incubator-logo-mask {
-  left: 4.6%;
-  bottom: 2.8%;
-  width: 19%;
-  height: 9.8%;
-}
-
-.level-mask {
-  left: 5%;
-  top: 63%;
-  width: 27%;
-  height: 15%;
+.dark .roadmap-stage,
+.slidev-layout.dark .roadmap-stage,
+:global(.dark) .roadmap-stage {
+  --roadmap-bg: #0d1117;
+  --roadmap-text: #f7f8fb;
+  --roadmap-muted: #a8b0bd;
+  --roadmap-level: #b5becd;
+  --roadmap-icon-shadow: rgb(0 0 0 / 0.32);
 }
 
 .avatar-panel,
@@ -173,7 +178,7 @@ function accentStyle(block: RoadmapTextBlock) {
 .roadmap-icon,
 .topic-block {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
 }
 
 .avatar-panel {
@@ -181,21 +186,23 @@ function accentStyle(block: RoadmapTextBlock) {
   top: 32.6%;
   width: 15.6%;
   aspect-ratio: 1;
-  display: none;
+  display: grid;
   place-items: center;
   border-radius: 10%;
+  box-shadow: 0 16px 36px var(--roadmap-icon-shadow);
 }
 
-.avatar-panel span {
-  font-size: 36.8px;
-  line-height: 1;
+.avatar-icon {
+  width: 54%;
+  height: 54%;
+  color: var(--roadmap-text);
 }
 
 .level-label {
   left: 5.5%;
   top: 64.5%;
   width: 22%;
-  color: #808080;
+  color: var(--roadmap-level);
   font-size: 17.4px;
   line-height: 1.16;
   font-weight: 600;
@@ -214,7 +221,7 @@ function accentStyle(block: RoadmapTextBlock) {
   margin: 0 0 6px;
   padding: 0;
   border: 0;
-  color: #050505;
+  color: var(--roadmap-text);
   font-size: 14.8px;
   line-height: 1.08;
   font-weight: 600;
@@ -233,7 +240,7 @@ function accentStyle(block: RoadmapTextBlock) {
 .topic-block ul {
   margin: 0;
   padding: 0 0 0 12px;
-  color: #858585;
+  color: var(--roadmap-muted);
   font-size: 10.2px;
   line-height: 1.16;
   list-style-position: outside;
@@ -242,7 +249,7 @@ function accentStyle(block: RoadmapTextBlock) {
 .topic-block li {
   margin: 0;
   padding: 0;
-  color: #858585;
+  color: var(--roadmap-muted);
   font-size: 10.2px;
   line-height: 1.16;
 }
@@ -308,38 +315,51 @@ function accentStyle(block: RoadmapTextBlock) {
 }
 
 .roadmap-icon {
-  display: none;
+  box-sizing: border-box;
+  display: grid;
   place-items: center;
-  color: #050505;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--roadmap-icon-border);
+  border-radius: 18px;
+  background: var(--roadmap-icon-bg);
+  color: var(--icon-color);
   font-weight: 800;
   text-align: center;
   line-height: 1;
+  box-shadow: 0 12px 28px var(--roadmap-icon-shadow);
+  backdrop-filter: blur(2px);
+}
+
+.roadmap-icon-symbol {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  color: var(--icon-symbol-color);
+}
+
+.roadmap-icon-symbol :deep([fill]:not([fill='none'])) {
+  fill: currentColor !important;
+}
+
+.roadmap-icon-symbol :deep([stroke]:not([stroke='none'])) {
+  stroke: currentColor !important;
 }
 
 .roadmap-icon span {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
+  color: var(--roadmap-text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.05;
 }
 
-.icon-badge span {
-  border-radius: 12px;
-  background: var(--icon-color);
-  color: #fff;
-  box-shadow: 0 8px 18px rgb(0 0 0 / 0.08);
-  font-size: 34px;
+.icon-badge {
+  border-radius: 20px;
 }
 
-.icon-logo span {
-  color: var(--icon-color);
-  font-size: 30px;
-  font-weight: 900;
-}
-
-.icon-emoji span {
-  color: var(--icon-color);
-  font-size: 76px;
+.icon-logo,
+.icon-emoji {
+  background: color-mix(in srgb, var(--icon-color) 9%, var(--roadmap-bg));
 }
 
 @media (prefers-reduced-motion: reduce) {

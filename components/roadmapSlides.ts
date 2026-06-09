@@ -12,6 +12,8 @@ export type RoadmapTextBlock = {
 
 export type RoadmapIcon = {
   label: string
+  icon?: string
+  iconColor?: string
   x: number
   y: number
   w: number
@@ -61,11 +63,11 @@ export const roadmapSlides: RoadmapSlideData[] = [
         accent: '#f45b2b',
         side: 'left',
       },
-      { title: 'Основы CSS', x: 1490, y: 515, w: 300, accent: '#2f63ff', side: 'left' },
-      { title: 'Семантика', x: 1250, y: 590, w: 270, align: 'right', accent: '#2f63ff', side: 'right' },
-      { title: 'Каскадность и продвинутые стили', x: 1495, y: 625, w: 330, accent: '#2f63ff', side: 'left' },
-      { title: 'Grid и анимации', x: 1180, y: 715, w: 300, align: 'right', accent: '#2f63ff', side: 'right' },
-      { title: 'Дополнительные темы и стилизация форм', x: 1495, y: 785, w: 360, accent: '#2f63ff', side: 'left' },
+      { title: 'Основы CSS', x: 1500, y: 500, w: 300, accent: '#2f63ff', side: 'left' },
+      { title: 'Семантика', x: 1240, y: 600, w: 250, align: 'right', accent: '#2f63ff', side: 'right' },
+      { title: 'Каскадность и продвинутые стили', x: 1510, y: 625, w: 335, accent: '#2f63ff', side: 'left' },
+      { title: 'Grid и анимации', x: 1220, y: 735, w: 280, align: 'right', accent: '#2f63ff', side: 'right' },
+      { title: 'Дополнительные темы и стилизация форм', x: 1510, y: 785, w: 340, accent: '#2f63ff', side: 'left' },
     ],
   },
   {
@@ -154,7 +156,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'Redux Toolkit', x: 145, y: 370, w: 240, h: 110, kind: 'badge', color: '#764abc' },
       { label: 'VITEST', x: 665, y: 545, w: 130, h: 90, kind: 'logo', color: '#7da721' },
       { label: 'AJAX', x: 1090, y: 570, w: 120, h: 80, kind: 'logo', color: '#398fd0' },
-      { label: 'WS', x: 1640, y: 455, w: 180, h: 110, kind: 'emoji', color: '#d8edf9' },
+      { label: 'WS', x: 1640, y: 455, w: 180, h: 110, kind: 'emoji', color: '#d8edf9', iconColor: "#131414" },
     ],
     blocks: [
       { title: 'Redux Toolkit', items: ['configureStore', 'createSlice', 'createAction', 'immerJS', 'createSelector', 'createAsyncThunk', 'обработка ошибок / rejectWithValue', 'builder (addCase, addMatcher)', 'matching utilities'], x: 205, y: 660, w: 440, accent: '#ff553d', side: 'left' },
@@ -183,14 +185,14 @@ export const roadmapSlides: RoadmapSlideData[] = [
     icons: [
       { label: 'RTK Query', x: 50, y: 720, w: 300, h: 85, kind: 'logo', color: '#764abc' },
       { label: 'TanStack + Zustand', x: 590, y: 255, w: 300, h: 160, kind: 'logo', color: '#28a45b' },
-      { label: '+ ESLint', x: 1100, y: 535, w: 330, h: 110, kind: 'logo', color: '#4b32bd' },
+      { label: '+ ESLint', x: 1035, y: 500, w: 310, h: 110, kind: 'logo', color: '#4b32bd' },
       { label: '⚙', x: 1665, y: 535, w: 145, h: 135, kind: 'emoji', color: '#5bb8ed' },
     ],
     blocks: [
       { title: 'RTK Query', items: ['Query запросы (Get)', 'Mutation запросы (Post, Delete, Put)', 'Conditional fetching', 'Кеширование и обновление данных', 'Обработка ошибок', 'Optimistic update'], x: 185, y: 190, w: 240, align: 'right', accent: '#6f45d6', side: 'right' },
       { title: 'TanStack & Zustand', items: ['TanStack Query: управление server state (fetching, caching, синхронизация), автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching, optimistic updates для мгновенного UI', 'Zustand: легковесный state manager для client state, минималистичный API без boilerplate', 'Разделение состояния: TanStack Query для серверных данных, Zustand для UI-состояния и глобальных настроек'], x: 605, y: 640, w: 620, accent: '#c8d10a', side: 'right' },
       { title: 'Code style', items: ['Prettier', 'ESlint', 'Stylelint', 'Работа с импортами'], x: 1235, y: 780, w: 360, align: 'right', accent: '#7448ff', side: 'right' },
-      { title: 'Оптимизация приложения', items: ['React memo', 'useCallback', 'useMemo', 'Оптимизация рендеринга React-компонентов'], x: 1585, y: 160, w: 380, align: 'right', accent: '#59b8ff', side: 'right' },
+      { title: 'Оптимизация приложения', items: ['React memo', 'useCallback', 'useMemo', 'Оптимизация рендеринга React-компонентов'], x: 1480, y: 160, w: 360, align: 'right', accent: '#59b8ff', side: 'right' },
     ],
   },
   {
