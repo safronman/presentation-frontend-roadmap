@@ -123,7 +123,6 @@ function iconName(icon: RoadmapIcon) {
       :style="iconStyle(icon)"
     >
       <Icon class="roadmap-icon-symbol" :icon="iconName(icon)" />
-      <span>{{ icon.label }}</span>
     </div>
 
     <article
