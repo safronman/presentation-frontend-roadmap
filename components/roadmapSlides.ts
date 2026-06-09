@@ -138,7 +138,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'React Router', x: 150, y: 405, w: 270, h: 105, kind: 'logo', color: '#fa3d54' },
       { label: 'MUI', x: 590, y: 750, w: 105, h: 70, kind: 'logo', color: '#1299dc' },
       { label: 'Flow', x: 1270, y: 650, w: 135, h: 110, kind: 'emoji', color: '#f9735b' },
-      { label: 'S', x: 1680, y: 500, w: 105, h: 120, kind: 'badge', color: '#ff4081' },
+      { label: 'Storybook', x: 1680, y: 500, w: 105, h: 120, kind: 'badge', color: '#ff4081' },
     ],
     blocks: [
       { title: 'React-router', items: ['Роуты', 'Редиректы (useNavigate и Navigate)', 'Обработка ошибки 404', 'Работа с параметрами'], x: 275, y: 760, w: 360, accent: '#ff3b5f', side: 'left' },
@@ -167,7 +167,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 5,
     path: 'M -60 500 C 180 360, 325 350, 455 490 C 565 610, 640 650, 760 585 C 910 505, 1000 385, 1145 350 C 1280 320, 1360 340, 1390 455 C 1435 620, 1365 760, 1515 790 C 1665 820, 1785 675, 1980 485',
     icons: [
-      { label: '✕', x: 205, y: 355, w: 135, h: 135, kind: 'emoji', color: '#df526b' },
+      { label: 'Errors', x: 205, y: 355, w: 135, h: 135, kind: 'emoji', color: '#df526b' },
       { label: 'React Hook Form + Zod', x: 865, y: 215, w: 320, h: 115, kind: 'logo', color: '#ec4c8a' },
       { label: 'Login', x: 1668, y: 675, w: 155, h: 140, kind: 'emoji', color: '#0e3a50' },
     ],
