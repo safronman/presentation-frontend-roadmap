@@ -35,7 +35,7 @@ function blockStyle(block: RoadmapTextBlock) {
     left: xPct(block.x),
     top: yPct(block.y),
     width: xPct(block.w),
-    textAlign: block.align ?? 'left',
+    textAlign: 'left',
   }
 }
 
