@@ -75,8 +75,8 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 2,
     path: 'M -60 470 C 100 395, 220 520, 390 555 C 570 590, 650 515, 760 600 C 880 690, 940 740, 1030 640 C 1125 535, 1210 455, 1290 595 C 1360 720, 1535 660, 1660 635 C 1805 605, 1870 735, 1980 695',
     icons: [
-      { label: 'React', x: 260, y: 430, w: 155, h: 120, kind: 'logo', color: '#26c6e8' },
-      { label: 'useState', x: 720, y: 535, w: 190, h: 140, kind: 'badge', color: '#e9f4ff', iconColor: '#000' },
+      { label: 'React', x: 100, y: 430, w: 155, h: 120, kind: 'logo', color: '#26c6e8',  },
+      { label: 'useState', x: 620, y: 500, w: 190, h: 140, kind: 'badge', color: '#e9f4ff', iconColor: '#000' },
       { label: 'TS', x: 1165, y: 610, w: 125, h: 125, kind: 'badge', color: '#3178c6' },
       { label: 'Data', x: 1585, y: 620, w: 120, h: 110, kind: 'emoji', color: '#0b89a8' },
     ],
@@ -94,10 +94,11 @@ export const roadmapSlides: RoadmapSlideData[] = [
         title: 'Основы React',
         items: ['Что такое React и зачем он нужен?', 'CRUD-операции', 'Зачем нужны компоненты?', 'Разработка первого компонента', 'Работа с объектом props'],
         x: 145,
-        y: 650,
+        y: 220,
         w: 500,
         accent: '#14c9e8',
         side: 'left',
+        accentLength: 90
       },
       {
         title: 'Состояние и управление React',
