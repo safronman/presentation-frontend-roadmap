@@ -263,9 +263,9 @@ function iconName(icon: RoadmapIcon) {
 
 .accent-line {
   position: absolute;
-  top: 0;
-  bottom: -8px;
-  width: 1px;
+  top: 5px;
+  bottom: -40px;
+  width: 2px;
 }
 
 .accent-left {
@@ -283,7 +283,7 @@ function iconName(icon: RoadmapIcon) {
   content: '';
   position: absolute;
   width: 15px;
-  height: 1px;
+  height: 2px;
   background: inherit;
 }
 
@@ -294,7 +294,7 @@ function iconName(icon: RoadmapIcon) {
 
 .accent-left .accent-line::after,
 .accent-right .accent-line::after {
-  top: 50%;
+  top: 0;
 }
 
 .accent-left .accent-line::before,
