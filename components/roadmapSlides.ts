@@ -35,7 +35,6 @@ export type RoadmapSlideData = {
 export const roadmapSlides: RoadmapSlideData[] = [
   {
     id: 1,
-    level: 'Уровень знаний: 0',
     avatar: '👶',
     avatarColor: '#ccfb50',
     path: 'M -60 530 C 170 455, 310 455, 420 520 C 540 690, 655 710, 820 660 C 980 615, 1045 515, 1185 425 C 1325 335, 1485 340, 1625 375 C 1760 410, 1845 415, 1980 420',
@@ -72,7 +71,6 @@ export const roadmapSlides: RoadmapSlideData[] = [
   },
   {
     id: 2,
-    level: 'Уровень знаний: Основы вёрстки',
     avatar: '👦',
     avatarColor: '#5bc7e7',
     path: 'M -60 470 C 100 395, 220 520, 390 555 C 570 590, 650 515, 760 600 C 880 690, 940 740, 1030 640 C 1125 535, 1210 455, 1290 595 C 1360 720, 1535 660, 1660 635 C 1805 605, 1870 735, 1980 695',
