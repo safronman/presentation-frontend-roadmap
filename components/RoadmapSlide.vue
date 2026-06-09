@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { Icon } from '@iconify/vue'
+import {computed} from 'vue'
+import {Icon} from '@iconify/vue'
 import RoadmapLine from './RoadmapLine.vue'
-import { roadmapSlides, type RoadmapIcon, type RoadmapTextBlock } from './roadmapSlides'
+import {roadmapSlides, type RoadmapIcon, type RoadmapTextBlock} from './roadmapSlides'
+
+const defaultIcon = {
+  x: 150,
+  y: 405,
+  w: 150,
+  h: 150,
+  kind: 'logo',
+} satisfies Required<Pick<RoadmapIcon, 'x' | 'y' | 'w' | 'h' | 'kind'>>
 
 const props = defineProps<{
   id: number
@@ -35,10 +43,10 @@ function iconStyle(icon: RoadmapIcon) {
   const color = icon.color ?? '#111'
 
   return {
-    left: xPct(icon.x),
-    top: yPct(icon.y),
-    width: xPct(icon.w),
-    height: `${icon.h / 10.8}%`,
+    left: xPct(icon.x ?? defaultIcon.x),
+    top: yPct(icon.y ?? defaultIcon.y),
+    width: xPct(icon.w ?? defaultIcon.w),
+    height: `${(icon.h ?? defaultIcon.h) / 10.8}%`,
     '--icon-color': color,
     '--icon-symbol-color': icon.iconColor ?? color,
   }
@@ -73,29 +81,29 @@ const roadmapIconNames: Record<string, string> = {
   Data: 'carbon:ibm-data-product-exchange',
   'React Router': 'logos:react-router',
   MUI: 'simple-icons:mui',
-  Flow: 'catppuccin:folder-components',
-  Storybook: 'ph:book-open-text',
-  'Redux Toolkit': 'ph:stack',
-  VITEST: 'ph:test-tube',
+  Flow: 'bxl:radix-ui',
+  Storybook: 'file-icons:storybook',
+  'Redux Toolkit': 'akar-icons:redux-fill',
+  VITEST: 'devicon-plain:playwright',
   AJAX: 'ph:cloud-arrow-down',
   WS: 'logos:websocket',
-  Errors: 'material-symbols:error',
+  Errors: 'line-md:loading-twotone-loop',
   'React Hook Form + Zod': 'simple-icons:reacthookform',
-  Login: 'ph:sign-in',
-  'RTK Query': 'ph:database',
+  Login: 'hugeicons:authorized',
+  'RTK Query': 'catppuccin:folder-redux-open',
   'TanStack + Zustand': 'simple-icons:tanstack',
   '+ ESLint': 'ph:code-block',
   JavaScript: 'ph:file-js',
   Git: 'ph:git-branch',
   GitHub: 'ph:github-logo',
-  Architecture: 'ph:blueprint',
-  'Next.js': 'ph:globe-hemisphere-west',
+  Architecture: 'game-icons:metal-scales',
+  'Next.js': 'ri:nextjs-fill',
   AI: 'ph:sparkle',
-  DEVOPS: 'ph:infinity',
+  DEVOPS: 'clarity:ci-cd-line',
   Security: 'ph:shield-check',
   Team: 'ph:users-three',
   Backend: 'hugeicons:database-locked',
-  Finish: 'ph:flag-checkered',
+  Finish: 'gis:flag-finish-b-o',
 }
 
 function iconName(icon: RoadmapIcon) {
@@ -105,10 +113,10 @@ function iconName(icon: RoadmapIcon) {
 
 <template>
   <section class="roadmap-stage">
-    <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#7c3aed" />
+    <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#7c3aed"/>
 
     <div v-if="slide.avatar" class="avatar-panel" :style="{ backgroundColor: slide.avatarColor }">
-      <Icon class="avatar-icon" :icon="avatarIcons[slide.id] ?? 'ph:rocket-launch'" />
+      <Icon class="avatar-icon" :icon="avatarIcons[slide.id] ?? 'ph:rocket-launch'"/>
     </div>
 
     <div v-if="slide.level" class="level-label">
@@ -116,27 +124,27 @@ function iconName(icon: RoadmapIcon) {
     </div>
 
     <div
-      v-for="icon in slide.icons"
-      :key="icon.label"
-      class="roadmap-icon"
-      :class="[`icon-${icon.kind ?? 'badge'}`]"
-      :style="iconStyle(icon)"
+        v-for="icon in slide.icons"
+        :key="icon.label"
+        class="roadmap-icon"
+        :class="[`icon-${icon.kind ?? defaultIcon.kind}`]"
+        :style="iconStyle(icon)"
     >
-      <Icon class="roadmap-icon-symbol" :icon="iconName(icon)" />
+      <Icon class="roadmap-icon-symbol" :icon="iconName(icon)"/>
     </div>
 
     <article
-      v-for="block in slide.blocks"
-      :key="block.title"
-      class="topic-block"
-      :class="[
+        v-for="block in slide.blocks"
+        :key="block.title"
+        class="topic-block"
+        :class="[
         `topic-${block.size ?? 'md'}`,
         block.accent ? `accent-${block.side ?? 'left'}` : '',
         block.accent ? `accent-direction-${block.accentDirection ?? 'down'}` : '',
       ]"
-      :style="blockStyle(block)"
+        :style="blockStyle(block)"
     >
-      <span v-if="block.accent" class="accent-line" :style="accentStyle(block)" />
+      <span v-if="block.accent" class="accent-line" :style="accentStyle(block)"/>
       <h2>{{ block.title }}</h2>
       <ul v-if="block.items?.length">
         <li v-for="item in block.items" :key="item">{{ item }}</li>

@@ -16,10 +16,10 @@ export type RoadmapIcon = {
   label: string
   icon?: string
   iconColor?: string
-  x: number
-  y: number
-  w: number
-  h: number
+  x?: number
+  y?: number
+  w?: number
+  h?: number
   kind?: 'emoji' | 'badge' | 'logo'
   color?: string
 }
@@ -41,8 +41,8 @@ export const roadmapSlides: RoadmapSlideData[] = [
     avatarColor: '#ccfb50',
     path: 'M -60 530 C 170 455, 310 455, 420 520 C 540 690, 655 710, 820 660 C 980 615, 1045 515, 1185 425 C 1325 335, 1485 340, 1625 375 C 1760 410, 1845 415, 1980 420',
     icons: [
-      { label: 'HTML5', x: 610, y: 625, w: 150, h: 150, kind: 'logo', color: '#f05a28' },
-      { label: 'CSS', x: 1405, y: 300, w: 150, h: 150, kind: 'logo', color: '#643395' },
+      { label: 'HTML5', x: 610, y: 625, color: '#f05a28' },
+      { label: 'CSS', x: 1405, y: 300, color: '#643395' },
     ],
     blocks: [
       { title: 'Старт', x: 180, y: 270, w: 300, size: 'lg' },
@@ -75,10 +75,10 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 2,
     path: 'M -60 470 C 100 395, 220 520, 390 555 C 570 590, 650 515, 760 600 C 880 690, 940 740, 1030 640 C 1125 535, 1210 455, 1290 595 C 1360 720, 1535 660, 1660 635 C 1805 605, 1870 735, 1980 695',
     icons: [
-      { label: 'React', x: 100, y: 430, w: 150, h: 150, kind: 'logo', color: '#26c6e8',  },
-      { label: 'useState', x: 420, y: 500, w: 150, h: 150, kind: 'logo', color: '#D1B506', iconColor: '#D1B506' },
-      { label: 'TS', x: 1040, y: 470, w: 150, h: 150, kind: 'logo', color: '#3379C6' },
-      { label: 'Data', x: 1600, y: 570, w: 150, h: 150, kind: 'logo', color: '#c505bc' },
+      { label: 'React', x: 100, y: 430, color: '#26c6e8' },
+      { label: 'useState', x: 420, y: 500, color: '#D1B506', iconColor: '#D1B506' },
+      { label: 'TS', x: 1040, y: 470, color: '#3379C6' },
+      { label: 'Data', x: 1600, y: 570, color: '#c505bc' },
     ],
     blocks: [
       {
@@ -140,26 +140,26 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 3,
     path: 'M -60 555 C 150 430, 300 405, 430 535 C 545 655, 610 825, 755 720 C 875 630, 835 470, 1010 500 C 1160 530, 1115 785, 1290 720 C 1445 660, 1505 455, 1670 515 C 1810 565, 1800 655, 1980 640',
     icons: [
-      { label: 'React Router', x: 150, y: 405, w: 150, h: 150, kind: 'logo', color: '#fa3d54' },
-      { label: 'MUI', x: 590, y: 750, w: 150, h: 150, kind: 'logo', color: '#1299dc' },
-      { label: 'Flow', x: 1270, y: 650, w: 150, h: 150, kind: 'logo', color: '#f9735b' },
-      { label: 'Storybook', x: 1680, y: 500, w: 150, h: 150, kind: 'logo', color: '#ff4081' },
+      { label: 'React Router', x: 120, y: 405, color: '#f44351' },
+      { label: 'MUI', x: 530, y: 660, color: '#027af5' },
+      { label: 'Flow', x: 1000, y: 500, color: '#130201' },
+      { label: 'Storybook', x: 1530, y: 450, color: '#ff4081' },
     ],
     blocks: [
-      { title: 'React-router', items: ['Роуты', 'Редиректы (useNavigate и Navigate)', 'Обработка ошибки 404', 'Работа с параметрами'], x: 275, y: 760, w: 360, accent: '#ff3b5f', side: 'left' },
-      { title: 'Интеграция Material UI', items: ['Введение в Material UI', 'Подключение и использование библиотечных компонентов', 'Material UI: стандартные элементы ввода', 'Material UI: элементы сетки', 'Стилизация'], x: 410, y: 215, w: 390, align: 'right', accent: '#ff3b85', side: 'right' },
-      { title: 'Компоненты / формы / таблицы', items: ['Headless компоненты', 'Radix UI', 'shadcn', 'Работа с таблицами'], x: 895, y: 235, w: 475, accent: '#008fdc', side: 'right' },
-      { title: 'Storybook', items: ['Введение в Storybook.', 'Тестирование React-компонентов (Snapshot/Screenshot)'], x: 1545, y: 760, w: 290, align: 'right', accent: '#573bff', side: 'right' },
+      { title: 'React-router', items: ['Роуты', 'Редиректы (useNavigate и Navigate)', 'Обработка ошибки 404', 'Работа с параметрами'], x: 150, y: 660, w: 360, accent: '#f44351', side: 'left', accentDirection: 'up', accentLength: 40 },
+      { title: 'Material UI', items: ['Введение в Material UI', 'Подключение и использование библиотечных компонентов', 'Material UI: стандартные элементы ввода', 'Material UI: элементы сетки', 'Стилизация'], x: 590, y: 250, w: 390, align: 'left', accent: '#027af5', side: 'left', accentLength: 190 },
+      { title: 'Компоненты / формы / таблицы', items: ['Headless компоненты', 'Radix UI / Base UI', 'ShadCN', 'Работа с таблицами'], x: 1030, y: 775, w: 475, accent: '#130201', side: 'left', accentLength: 50, accentDirection: 'up' },
+      { title: 'Storybook', items: ['Введение в Storybook.', 'Тестирование React-компонентов (Snapshot/Screenshot)'], x: 1545, y: 260, w: 290, align: 'left', accent: '#ff4081', side: 'left', accentLength: 90 },
     ],
   },
   {
     id: 4,
     path: 'M -60 520 C 135 405, 280 365, 415 470 C 545 570, 585 685, 735 625 C 875 570, 900 440, 1045 500 C 1170 550, 1145 700, 1280 640 C 1435 570, 1500 500, 1635 555 C 1770 610, 1815 720, 1980 645',
     icons: [
-      { label: 'Redux Toolkit', x: 145, y: 370, w: 240, h: 110, kind: 'badge', color: '#764abc' },
-      { label: 'VITEST', x: 665, y: 545, w: 130, h: 90, kind: 'logo', color: '#7da721' },
-      { label: 'AJAX', x: 1090, y: 570, w: 120, h: 80, kind: 'logo', color: '#398fd0' },
-      { label: 'WS', x: 1640, y: 455, w: 180, h: 110, kind: 'emoji', color: '#d8edf9', iconColor: "#131414" },
+      { label: 'Redux Toolkit', x: 145, y: 370, color: '#764abc' },
+      { label: 'VITEST', x: 665, y: 545, color: '#7da721' },
+      { label: 'AJAX', x: 1090, y: 570, color: '#398fd0' },
+      { label: 'WS', x: 1640, y: 455, color: '#d8edf9', iconColor: "#131414" },
     ],
     blocks: [
       { title: 'Redux Toolkit', items: ['configureStore', 'createSlice', 'createAction', 'immerJS', 'createSelector', 'createAsyncThunk', 'обработка ошибок / rejectWithValue', 'builder (addCase, addMatcher)', 'matching utilities'], x: 205, y: 660, w: 440, accent: '#ff553d', side: 'left' },
@@ -172,9 +172,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 5,
     path: 'M -60 500 C 180 360, 325 350, 455 490 C 565 610, 640 650, 760 585 C 910 505, 1000 385, 1145 350 C 1280 320, 1360 340, 1390 455 C 1435 620, 1365 760, 1515 790 C 1665 820, 1785 675, 1980 485',
     icons: [
-      { label: 'Errors', x: 205, y: 355, w: 135, h: 135, kind: 'emoji', color: '#df526b' },
-      { label: 'React Hook Form + Zod', x: 865, y: 215, w: 320, h: 115, kind: 'logo', color: '#ec4c8a' },
-      { label: 'Login', x: 1668, y: 675, w: 155, h: 140, kind: 'emoji', color: '#0e3a50' },
+      { label: 'Errors', x: 205, y: 355, color: '#df526b' },
+      { label: 'React Hook Form + Zod', x: 865, y: 215, color: '#ec4c8a' },
+      { label: 'Login', x: 1668, y: 675, color: '#0e3a50' },
     ],
     blocks: [
       { title: 'Обработка ошибок / loaders', items: ['Preloaders (отображение на UI)', 'Disable кнопок и компонент, как часть правильного UX', 'Обработка ошибок'], x: 310, y: 750, w: 440, accent: '#ff5d83', side: 'left' },
@@ -186,10 +186,10 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 6,
     path: 'M -60 540 C 155 455, 275 545, 395 665 C 505 775, 580 555, 705 425 C 820 305, 950 440, 1065 555 C 1195 685, 1210 680, 1320 620 C 1460 545, 1580 555, 1690 625 C 1800 695, 1860 665, 1980 645',
     icons: [
-      { label: 'RTK Query', x: 50, y: 720, w: 300, h: 85, kind: 'logo', color: '#764abc' },
-      { label: 'TanStack + Zustand', x: 590, y: 255, w: 300, h: 160, kind: 'logo', color: '#28a45b' },
-      { label: '+ ESLint', x: 1035, y: 500, w: 310, h: 110, kind: 'logo', color: '#4b32bd' },
-      { label: '⚙', x: 1665, y: 535, w: 145, h: 135, kind: 'emoji', color: '#5bb8ed' },
+      { label: 'RTK Query', x: 50, y: 720, color: '#764abc' },
+      { label: 'TanStack + Zustand', x: 590, y: 255, color: '#28a45b' },
+      { label: '+ ESLint', x: 1035, y: 500, color: '#4b32bd' },
+      { label: '⚙', x: 1665, y: 535, color: '#5bb8ed' },
     ],
     blocks: [
       { title: 'RTK Query', items: ['Query запросы (Get)', 'Mutation запросы (Post, Delete, Put)', 'Conditional fetching', 'Кеширование и обновление данных', 'Обработка ошибок', 'Optimistic update'], x: 185, y: 190, w: 240, align: 'right', accent: '#6f45d6', side: 'right' },
@@ -202,9 +202,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 7,
     path: 'M -60 430 C 140 345, 220 555, 330 670 C 455 800, 430 930, 585 885 C 735 840, 1015 850, 1100 760 C 1195 660, 1165 610, 1345 575 C 1515 545, 1655 420, 1765 555 C 1845 650, 1875 650, 1980 640',
     icons: [
-      { label: 'JavaScript', x: 400, y: 795, w: 130, h: 130, kind: 'badge', color: '#f7df1e' },
-      { label: 'Git', x: 1065, y: 610, w: 180, h: 180, kind: 'badge', color: '#f25a4e' },
-      { label: 'GitHub', x: 1665, y: 470, w: 140, h: 145, kind: 'emoji', color: '#111' },
+      { label: 'JavaScript', x: 400, y: 795, color: '#f7df1e' },
+      { label: 'Git', x: 1065, y: 610, color: '#f25a4e' },
+      { label: 'GitHub', x: 1665, y: 470, color: '#111' },
     ],
     blocks: [
       { title: 'Введение', items: ['Объекты', 'Функции', 'Деструктурирующие присваивания', 'Ассоциативный массив'], x: 60, y: 180, w: 430, align: 'right' },
@@ -219,8 +219,8 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 8,
     path: 'M -60 700 C 170 615, 245 790, 375 835 C 520 885, 650 790, 790 650 C 910 530, 955 520, 1085 505 C 1195 492, 1195 370, 1305 335 C 1450 288, 1650 325, 1980 435',
     icons: [
-      { label: 'Architecture', x: 45, y: 660, w: 200, h: 170, kind: 'emoji', color: '#ffc94d' },
-      { label: 'Next.js', x: 1485, y: 125, w: 180, h: 180, kind: 'badge', color: '#111' },
+      { label: 'Architecture', x: 45, y: 660, color: '#ffc94d' },
+      { label: 'Next.js', x: 1485, y: 125, color: '#111' },
     ],
     blocks: [
       { title: 'Архитектура', items: ['Разделение ответственности: компонентная структура, разделение UI/логики/данных, принципы SOLID', 'State Management: выбор подхода (локальный state, Context, Zustand/Redux), избегание prop drilling', 'Масштабируемость: файловая структура проекта (feature-based/layer-based), переиспользуемые компоненты, UI-kit', 'Паттерны проектирования: Container/Presentational, Compound Components, Render Props, HOC', 'Производительность: code splitting, lazy loading, мемоизация, виртуализация списков'], x: 165, y: 160, w: 730, accent: '#7a4cf3', side: 'left' },
@@ -231,9 +231,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 9,
     path: 'M -60 490 C 185 335, 330 380, 485 505 C 600 600, 665 575, 740 615 C 840 665, 910 805, 1040 775 C 1140 750, 1190 680, 1185 805 C 1180 950, 1320 1010, 1435 960 C 1545 910, 1580 800, 1690 780 C 1825 755, 1880 810, 1980 720',
     icons: [
-      { label: 'AI', x: 140, y: 305, w: 145, h: 145, kind: 'badge', color: '#695bc4' },
-      { label: 'DEVOPS', x: 950, y: 690, w: 210, h: 160, kind: 'logo', color: '#111' },
-      { label: 'Security', x: 1685, y: 695, w: 140, h: 145, kind: 'emoji', color: '#42c66d' },
+      { label: 'AI', x: 140, y: 305, color: '#695bc4' },
+      { label: 'DEVOPS', x: 950, y: 690, color: '#111' },
+      { label: 'Security', x: 1685, y: 695, color: '#42c66d' },
     ],
     blocks: [
       { title: 'AI-инструменты', items: ['AI-IDE: Cursor / Claude Code / Codex / Warp', 'Prompt Engineering: контекстные промпты, .cursorrules для передачи стайл-гайда и стека проекта', 'AI-UI: генерация React-компонентов из скриншотов/макетов', 'Рефакторинг: поиск узких мест, объяснение legacy-кода, автофикс ошибок по логам', 'AI-тестирование: автогенерация тестов (Vitest, Playwright), моковых данных и граничных случаев', 'Верификация: критическая проверка AI-кода на галлюцинации, уязвимости и соответствие бизнес-логике', 'Документация: автогенерация docs и схем данных (Zod/TypeScript) из описаний API'], x: 250, y: 590, w: 610, accent: '#635bff', side: 'left' },
@@ -245,9 +245,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 10,
     path: 'M -60 555 C 115 720, 220 835, 370 845 C 500 855, 540 790, 620 700 C 735 570, 820 560, 980 520 C 1110 488, 1145 315, 1300 300 C 1475 285, 1605 405, 1665 535 C 1740 680, 1820 720, 1980 655',
     icons: [
-      { label: 'Team', x: 190, y: 685, w: 220, h: 190, kind: 'emoji', color: '#6a58c8' },
-      { label: 'Backend', x: 1260, y: 160, w: 215, h: 190, kind: 'emoji', color: '#ffd866' },
-      { label: 'Finish', x: 1648, y: 475, w: 210, h: 210, kind: 'emoji', color: '#40e02e' },
+      { label: 'Team', x: 190, y: 685, color: '#6a58c8' },
+      { label: 'Backend', x: 1260, y: 160, color: '#ffd866' },
+      { label: 'Finish', x: 1648, y: 475, color: '#40e02e' },
     ],
     blocks: [
       { title: 'Командная работа', items: ['Agile-процессы: спринты, daily stand-ups, ретроспективы, планирование задач', 'Task Management: работа с Jira/Linear/Asana, декомпозиция задач, оценка Story Points', 'Kanban-flow: управление статусами задач (To Do -> In Progress -> Review -> Done), WIP-лимиты', 'Code Review: культура ревью кода, конструктивная обратная связь, соблюдение DoD (Definition of Done)', 'Коммуникация: документирование решений, синхронизация с командой, прозрачность блокеров'], x: 365, y: 220, w: 650, accent: '#7a4cf3', side: 'left' },
