@@ -7,6 +7,8 @@ export type RoadmapTextBlock = {
   align?: 'left' | 'center' | 'right'
   accent?: string
   side?: 'left' | 'right'
+  accentDirection?: 'up' | 'down'
+  accentLength?: number
   size?: 'sm' | 'md' | 'lg'
 }
 
@@ -62,11 +64,11 @@ export const roadmapSlides: RoadmapSlideData[] = [
         accent: '#f45b2b',
         side: 'left',
       },
-      { title: 'Основы CSS', x: 1470, y: 500, w: 300, accent: '#2f63ff', side: 'left' },
-      { title: 'Семантика', x: 1470, y: 560, w: 250, align: 'left', accent: '#2f63ff', side: 'left' },
-      { title: 'Каскадность и продвинутые стили', x: 1470, y: 625, w: 335, accent: '#2f63ff', side: 'left' },
-      { title: 'Grid и анимации', x: 1470, y: 710, w: 280, align: 'left', accent: '#2f63ff', side: 'left' },
-      { title: 'Дополнительные темы и стилизация форм', x: 1470, y: 780, w: 340, accent: '#2f63ff', side: 'left' },
+      { title: 'Основы CSS', x: 1470, y: 500, w: 300, accent: '#2f63ff', side: 'left', accentDirection: 'up', accentLength: 30 },
+      { title: 'Семантика', x: 1470, y: 560, w: 250, align: 'left', accent: '#2f63ff', side: 'left', accentDirection: 'up', accentLength: 30 },
+      { title: 'Каскадность и продвинутые стили', x: 1470, y: 620, w: 335, accent: '#2f63ff', side: 'left', accentDirection: 'up', accentLength: 32 },
+      { title: 'Grid и анимации', x: 1470, y: 700, w: 280, align: 'left', accent: '#2f63ff', side: 'left', accentDirection: 'up', accentLength: 42 },
+      { title: 'Дополнительные темы и стилизация форм', x: 1470, y: 780, w: 340, accent: '#2f63ff', side: 'left', accentDirection: 'up', accentLength: 50  },
     ],
   },
   {

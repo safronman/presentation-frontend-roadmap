@@ -47,6 +47,7 @@ function iconStyle(icon: RoadmapIcon) {
 function accentStyle(block: RoadmapTextBlock) {
   return {
     backgroundColor: block.accent ?? '#555',
+    '--accent-line-length': `${block.accentLength ?? 120}px`,
   }
 }
 
@@ -132,6 +133,7 @@ function iconName(icon: RoadmapIcon) {
       :class="[
         `topic-${block.size ?? 'md'}`,
         block.accent ? `accent-${block.side ?? 'left'}` : '',
+        block.accent ? `accent-direction-${block.accentDirection ?? 'down'}` : '',
       ]"
       :style="blockStyle(block)"
     >
@@ -263,9 +265,16 @@ function iconName(icon: RoadmapIcon) {
 
 .accent-line {
   position: absolute;
-  top: 5px;
-  bottom: -40px;
   width: 2px;
+  height: var(--accent-line-length);
+}
+
+.accent-direction-down .accent-line {
+  top: 5px;
+}
+
+.accent-direction-up .accent-line {
+  bottom: calc(100% - 5px);
 }
 
 .accent-left {
@@ -295,6 +304,12 @@ function iconName(icon: RoadmapIcon) {
 .accent-left .accent-line::after,
 .accent-right .accent-line::after {
   top: 0;
+}
+
+.accent-direction-up .accent-line::before,
+.accent-direction-up .accent-line::after {
+  top: auto;
+  bottom: 0;
 }
 
 .accent-left .accent-line::before,
