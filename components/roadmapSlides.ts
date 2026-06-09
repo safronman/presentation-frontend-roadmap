@@ -156,16 +156,16 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 4,
     path: 'M -60 520 C 135 405, 280 365, 415 470 C 545 570, 585 685, 735 625 C 875 570, 900 440, 1045 500 C 1170 550, 1145 700, 1280 640 C 1435 570, 1500 500, 1635 555 C 1770 610, 1815 720, 1980 645',
     icons: [
-      { label: 'Redux Toolkit', x: 145, y: 370, color: '#764abc' },
-      { label: 'VITEST', x: 665, y: 545, color: '#7da721' },
-      { label: 'AJAX', x: 1090, y: 570, color: '#398fd0' },
+      { label: 'Redux Toolkit', x: 145, y: 370, color: '#5a3e89' },
+      { label: 'VITEST', x: 665, y: 545, color: '#46ba4c' },
+      { label: 'AJAX', x: 1090, y: 570, color: '#5b2be4' },
       { label: 'WS', x: 1640, y: 455, color: '#d8edf9', iconColor: "#131414" },
     ],
     blocks: [
-      { title: 'Redux Toolkit', items: ['configureStore', 'createSlice', 'createAction', 'immerJS', 'createSelector', 'createAsyncThunk', 'обработка ошибок / rejectWithValue', 'builder (addCase, addMatcher)', 'matching utilities'], x: 205, y: 660, w: 440, accent: '#ff553d', side: 'left' },
-      { title: 'Тестирование', items: ['Работа с Vitest', 'Покрытие редьюсера тестами', 'Test Driven Development (TDD)'], x: 725, y: 105, w: 400, accent: '#5db8ef', side: 'left' },
-      { title: 'Взаимодействие с сервером', items: ['Запросы к серверу (Ajax Request) с Axios', 'Работа с REST API', 'Реализация CRUD операций', 'Типизация запросов и использование "дженериков"'], x: 1170, y: 835, w: 540, accent: '#573bff', side: 'left' },
-      { title: 'WebSocket', items: ['Постоянное соединение клиента и сервера', 'Передача данных в реальном времени без задержек'], x: 1375, y: 160, w: 410, align: 'right', accent: '#573bff', side: 'right' },
+      { title: 'Redux Toolkit', items: ['configureStore', 'createSlice', 'createAction', 'immerJS', 'createSelector', 'createAsyncThunk', 'обработка ошибок / rejectWithValue', 'builder (addCase, addMatcher)', 'matching utilities'], x: 205, y: 660, w: 440, accent: '#5a3e89', side: 'left', accentDirection: 'up', accentLength: 45 },
+      { title: 'Тестирование', items: ['Работа с Jest / Vitest', 'Покрытие редьюсера тестами', 'Test Driven Development (TDD)', 'Playwright'], x: 725, y: 105, w: 400, accent: '#46ba4c', side: 'left', accentLength: 115 },
+      { title: 'Взаимодействие с сервером', items: ['Запросы к серверу (Ajax Request) с Axios', 'Работа с REST API', 'Реализация CRUD операций', 'Типизация запросов и использование "дженериков"'], x: 1170, y: 835, w: 540, accent: '#5b2be4', side: 'left', accentDirection: 'up', accentLength: 45 },
+      { title: 'WebSocket', items: ['Постоянное соединение клиента и сервера', 'Передача данных в реальном времени без задержек'], x: 1375, y: 160, w: 410, align: 'right', accent: '#131414', side: 'right', accentLength: 105 },
     ],
   },
   {
@@ -177,9 +177,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'Login', x: 1668, y: 675, color: '#0e3a50' },
     ],
     blocks: [
-      { title: 'Обработка ошибок / loaders', items: ['Preloaders (отображение на UI)', 'Disable кнопок и компонент, как часть правильного UX', 'Обработка ошибок'], x: 310, y: 750, w: 440, accent: '#ff5d83', side: 'left' },
-      { title: 'React hook form', items: ['Получение данных', 'Валидация и обработка ошибок', 'Валидация форм и ответа сервера с Zod'], x: 975, y: 700, w: 420, accent: '#1d6bff', side: 'left' },
-      { title: 'Auth flow', items: ['Axios interceptors', 'Protected routes', 'Реализация авторизационного Flow (login, logout, authMe)'], x: 1540, y: 240, w: 310, align: 'right', accent: '#12aeb8', side: 'right' },
+      { title: 'Обработка ошибок / loaders', items: ['Preloaders (отображение на UI)', 'Disable кнопок и компонент, как часть правильного UX', 'Обработка ошибок'], x: 310, y: 750, w: 440, accent: '#df526b', side: 'left', accentDirection: 'up', accentLength: 75 },
+      { title: 'React hook form', items: ['Получение данных', 'Валидация и обработка ошибок', 'Валидация форм и ответа сервера с Zod'], x: 975, y: 700, w: 420, accent: '#ec4c8a', side: 'left', accentDirection: 'up', accentLength: 80 },
+      { title: 'Auth flow', items: ['Axios interceptors', 'Protected routes', 'Реализация авторизационного Flow (login, logout, authMe)'], x: 1540, y: 240, w: 310, align: 'right', accent: '#0e3a50', side: 'right', accentLength: 150 },
     ],
   },
   {
@@ -192,10 +192,10 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: '⚙', x: 1665, y: 535, color: '#5bb8ed' },
     ],
     blocks: [
-      { title: 'RTK Query', items: ['Query запросы (Get)', 'Mutation запросы (Post, Delete, Put)', 'Conditional fetching', 'Кеширование и обновление данных', 'Обработка ошибок', 'Optimistic update'], x: 185, y: 190, w: 240, align: 'right', accent: '#6f45d6', side: 'right' },
-      { title: 'TanStack & Zustand', items: ['TanStack Query: управление server state (fetching, caching, синхронизация), автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching, optimistic updates для мгновенного UI', 'Zustand: легковесный state manager для client state, минималистичный API без boilerplate', 'Разделение состояния: TanStack Query для серверных данных, Zustand для UI-состояния и глобальных настроек'], x: 605, y: 640, w: 620, accent: '#c8d10a', side: 'right' },
-      { title: 'Code style', items: ['Prettier', 'ESlint', 'Stylelint', 'Работа с импортами'], x: 1235, y: 780, w: 360, align: 'right', accent: '#7448ff', side: 'right' },
-      { title: 'Оптимизация приложения', items: ['React memo', 'useCallback', 'useMemo', 'Оптимизация рендеринга React-компонентов'], x: 1480, y: 160, w: 360, align: 'right', accent: '#59b8ff', side: 'right' },
+      { title: 'RTK Query', items: ['Query запросы (Get)', 'Mutation запросы (Post, Delete, Put)', 'Conditional fetching', 'Кеширование и обновление данных', 'Обработка ошибок', 'Optimistic update'], x: 185, y: 190, w: 240, align: 'right', accent: '#764abc', side: 'right', accentLength: 140 },
+      { title: 'TanStack & Zustand', items: ['TanStack Query: управление server state (fetching, caching, синхронизация), автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching, optimistic updates для мгновенного UI', 'Zustand: легковесный state manager для client state, минималистичный API без boilerplate', 'Разделение состояния: TanStack Query для серверных данных, Zustand для UI-состояния и глобальных настроек'], x: 605, y: 640, w: 620, accent: '#28a45b', side: 'left', accentDirection: 'up', accentLength: 70 },
+      { title: 'Code style', items: ['Prettier', 'ESlint', 'Stylelint', 'Работа с импортами'], x: 1235, y: 780, w: 360, align: 'right', accent: '#4b32bd', side: 'right', accentDirection: 'up', accentLength: 55 },
+      { title: 'Оптимизация приложения', items: ['React memo', 'useCallback', 'useMemo', 'Оптимизация рендеринга React-компонентов'], x: 1480, y: 160, w: 360, align: 'right', accent: '#5bb8ed', side: 'right', accentLength: 170 },
     ],
   },
   {
@@ -207,12 +207,12 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'GitHub', x: 1665, y: 470, color: '#111' },
     ],
     blocks: [
-      { title: 'Введение', items: ['Объекты', 'Функции', 'Деструктурирующие присваивания', 'Ассоциативный массив'], x: 60, y: 180, w: 430, align: 'right' },
-      { title: 'Замыкания и асинхронное программирование', items: ['Лексическое окружение', 'Замыкания', 'Promise', 'async-await, try catch', 'event loop'], x: 60, y: 355, w: 430, align: 'right' },
-      { title: 'Работа с массивами и функции высшего порядка', items: ['Работа с массивом (map, filter)', 'Callback', 'События (onClick, onChange, onBlur)', 'Имутабельность'], x: 510, y: 190, w: 490, accent: '#f2ca00', side: 'left' },
-      { title: 'Объектно-ориентированное программирование', items: ['ООП: This, new, call, apply, bind', 'Классы (Class)', 'Прототипы (proto)', 'Observer, Publisher-Subscriber'], x: 510, y: 480, w: 480, accent: '#f2ca00', side: 'left' },
-      { title: 'Git', items: ['Базовые команды: init, add, commit, push, pull', 'Командная работа: ветки, разрешение конфликтов', 'Code Review: создание PR, ревью чужого кода с комментариями', 'Автоматизация: Git Hooks (husky, lint-staged) для проверок перед коммитом'], x: 1215, y: 160, w: 570, accent: '#ff5d50', side: 'left' },
-      { title: 'GitHub', items: ['Remote-репозитории: push, fetch, pull, настройка SSH-ключей', 'PR-процесс: создание PR, правки после ревью, разрешение конфликтов', 'Управление проектом: GitHub Projects (Kanban), Issues для трекинга задач', 'Профиль: оформление профиля как портфолио, поддержание активности'], x: 1315, y: 705, w: 520, align: 'right', accent: '#111', side: 'right' },
+      { title: 'Введение', items: ['Объекты', 'Функции', 'Деструктурирующие присваивания', 'Ассоциативный массив'], x: 60, y: 180, w: 430, align: 'right', accent: '#f7df1e', side: 'right', accentLength: 90 },
+      { title: 'Замыкания и асинхронное программирование', items: ['Лексическое окружение', 'Замыкания', 'Promise', 'async-await, try catch', 'event loop'], x: 60, y: 355, w: 430, align: 'right', accent: '#f7df1e', side: 'right', accentLength: 150 },
+      { title: 'Работа с массивами и функции высшего порядка', items: ['Работа с массивом (map, filter)', 'Callback', 'События (onClick, onChange, onBlur)', 'Имутабельность'], x: 510, y: 190, w: 490, accent: '#f7df1e', side: 'left', accentLength: 160 },
+      { title: 'Объектно-ориентированное программирование', items: ['ООП: This, new, call, apply, bind', 'Классы (Class)', 'Прототипы (proto)', 'Observer, Publisher-Subscriber'], x: 510, y: 480, w: 480, accent: '#f7df1e', side: 'left', accentDirection: 'up', accentLength: 35 },
+      { title: 'Git', items: ['Базовые команды: init, add, commit, push, pull', 'Командная работа: ветки, разрешение конфликтов', 'Code Review: создание PR, ревью чужого кода с комментариями', 'Автоматизация: Git Hooks (husky, lint-staged) для проверок перед коммитом'], x: 1215, y: 160, w: 570, accent: '#f25a4e', side: 'left', accentLength: 155 },
+      { title: 'GitHub', items: ['Remote-репозитории: push, fetch, pull, настройка SSH-ключей', 'PR-процесс: создание PR, правки после ревью, разрешение конфликтов', 'Управление проектом: GitHub Projects (Kanban), Issues для трекинга задач', 'Профиль: оформление профиля как портфолио, поддержание активности'], x: 1315, y: 705, w: 520, align: 'right', accent: '#111', side: 'right', accentDirection: 'up', accentLength: 55 },
     ],
   },
   {
@@ -223,8 +223,8 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'Next.js', x: 1485, y: 125, color: '#111' },
     ],
     blocks: [
-      { title: 'Архитектура', items: ['Разделение ответственности: компонентная структура, разделение UI/логики/данных, принципы SOLID', 'State Management: выбор подхода (локальный state, Context, Zustand/Redux), избегание prop drilling', 'Масштабируемость: файловая структура проекта (feature-based/layer-based), переиспользуемые компоненты, UI-kit', 'Паттерны проектирования: Container/Presentational, Compound Components, Render Props, HOC', 'Производительность: code splitting, lazy loading, мемоизация, виртуализация списков'], x: 165, y: 160, w: 730, accent: '#7a4cf3', side: 'left' },
-      { title: 'Next.js', items: ['Маршрутизация: файловая структура, Layouts, Nested Routes, спецфайлы (loading.js, error.js, not-found.js)', "RSC: разделение на серверные (по умолчанию) и клиентские ('use client') компоненты для минимизации бандла", 'Data Fetching: async/await в компонентах, управление кэшем (revalidateTag, revalidatePath)', 'Server Actions: обработка форм и мутаций без API-эндпоинтов и useEffect', 'Рендеринг: Static/Dynamic Rendering, PPR (Partial Prerendering)', 'Оптимизация: next/image, шрифты, скрипты, Turbopack для быстрой сборки'], x: 880, y: 615, w: 700, align: 'right', accent: '#111', side: 'right' },
+      { title: 'Архитектура', items: ['Разделение ответственности: компонентная структура, разделение UI/логики/данных, принципы SOLID', 'State Management: выбор подхода (локальный state, Context, Zustand/Redux), избегание prop drilling', 'Масштабируемость: файловая структура проекта (feature-based/layer-based), переиспользуемые компоненты, UI-kit', 'Паттерны проектирования: Container/Presentational, Compound Components, Render Props, HOC', 'Производительность: code splitting, lazy loading, мемоизация, виртуализация списков'], x: 165, y: 160, w: 730, accent: '#ffc94d', side: 'left', accentLength: 170 },
+      { title: 'Next.js', items: ['Маршрутизация: файловая структура, Layouts, Nested Routes, спецфайлы (loading.js, error.js, not-found.js)', "RSC: разделение на серверные (по умолчанию) и клиентские ('use client') компоненты для минимизации бандла", 'Data Fetching: async/await в компонентах, управление кэшем (revalidateTag, revalidatePath)', 'Server Actions: обработка форм и мутаций без API-эндпоинтов и useEffect', 'Рендеринг: Static/Dynamic Rendering, PPR (Partial Prerendering)', 'Оптимизация: next/image, шрифты, скрипты, Turbopack для быстрой сборки'], x: 880, y: 615, w: 700, align: 'right', accent: '#111', side: 'right', accentDirection: 'up', accentLength: 85 },
     ],
   },
   {
@@ -236,9 +236,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'Security', x: 1685, y: 695, color: '#42c66d' },
     ],
     blocks: [
-      { title: 'AI-инструменты', items: ['AI-IDE: Cursor / Claude Code / Codex / Warp', 'Prompt Engineering: контекстные промпты, .cursorrules для передачи стайл-гайда и стека проекта', 'AI-UI: генерация React-компонентов из скриншотов/макетов', 'Рефакторинг: поиск узких мест, объяснение legacy-кода, автофикс ошибок по логам', 'AI-тестирование: автогенерация тестов (Vitest, Playwright), моковых данных и граничных случаев', 'Верификация: критическая проверка AI-кода на галлюцинации, уязвимости и соответствие бизнес-логике', 'Документация: автогенерация docs и схем данных (Zod/TypeScript) из описаний API'], x: 250, y: 590, w: 610, accent: '#635bff', side: 'left' },
-      { title: 'DevOps', items: ['CI/CD: автозапуск тестов и сборки через GitHub Actions/GitLab CI, блокировка деплоя при падении тестов', 'Deployment: работа с Vercel. Preview-деплои для каждой ветки', 'Docker: контейнеризация SSR-приложений (Next.js, Remix)', 'Environment Variables: управление секретами и .env для dev/staging/prod'], x: 435, y: 160, w: 620, align: 'right', accent: '#1c6bff', side: 'right' },
-      { title: 'Security', items: ['XSS & Injection: защита от внедрения скриптов, санитизация пользовательского ввода, использование dangerouslySetInnerHTML только с очисткой', 'Аутентификация: безопасное хранение токенов (httpOnly cookies vs localStorage), защита от CSRF-атак', 'HTTPS & CORS: работа только по HTTPS, понимание политик CORS и Content Security Policy (CSP)', 'Секреты: никогда не хранить API-ключи и токены в коде, использование environment variables', 'Валидация: проверка данных на клиенте и сервере, не доверять клиентским данным'], x: 1080, y: 240, w: 650, align: 'right', accent: '#19b5aa', side: 'right' },
+      { title: 'AI-инструменты', items: ['AI-IDE: Cursor / Claude Code / Codex / Warp', 'Prompt Engineering: контекстные промпты, .cursorrules для передачи стайл-гайда и стека проекта', 'AI-UI: генерация React-компонентов из скриншотов/макетов', 'Рефакторинг: поиск узких мест, объяснение legacy-кода, автофикс ошибок по логам', 'AI-тестирование: автогенерация тестов (Vitest, Playwright), моковых данных и граничных случаев', 'Верификация: критическая проверка AI-кода на галлюцинации, уязвимости и соответствие бизнес-логике', 'Документация: автогенерация docs и схем данных (Zod/TypeScript) из описаний API'], x: 250, y: 590, w: 610, accent: '#695bc4', side: 'left', accentDirection: 'up', accentLength: 80 },
+      { title: 'DevOps', items: ['CI/CD: автозапуск тестов и сборки через GitHub Actions/GitLab CI, блокировка деплоя при падении тестов', 'Deployment: работа с Vercel. Preview-деплои для каждой ветки', 'Docker: контейнеризация SSR-приложений (Next.js, Remix)', 'Environment Variables: управление секретами и .env для dev/staging/prod'], x: 435, y: 160, w: 620, align: 'right', accent: '#111', side: 'right', accentLength: 135 },
+      { title: 'Security', items: ['XSS & Injection: защита от внедрения скриптов, санитизация пользовательского ввода, использование dangerouslySetInnerHTML только с очисткой', 'Аутентификация: безопасное хранение токенов (httpOnly cookies vs localStorage), защита от CSRF-атак', 'HTTPS & CORS: работа только по HTTPS, понимание политик CORS и Content Security Policy (CSP)', 'Секреты: никогда не хранить API-ключи и токены в коде, использование environment variables', 'Валидация: проверка данных на клиенте и сервере, не доверять клиентским данным'], x: 1080, y: 240, w: 650, align: 'right', accent: '#42c66d', side: 'right', accentLength: 160 },
     ],
   },
   {
@@ -250,8 +250,8 @@ export const roadmapSlides: RoadmapSlideData[] = [
       { label: 'Finish', x: 1648, y: 475, color: '#40e02e' },
     ],
     blocks: [
-      { title: 'Командная работа', items: ['Agile-процессы: спринты, daily stand-ups, ретроспективы, планирование задач', 'Task Management: работа с Jira/Linear/Asana, декомпозиция задач, оценка Story Points', 'Kanban-flow: управление статусами задач (To Do -> In Progress -> Review -> Done), WIP-лимиты', 'Code Review: культура ревью кода, конструктивная обратная связь, соблюдение DoD (Definition of Done)', 'Коммуникация: документирование решений, синхронизация с командой, прозрачность блокеров'], x: 365, y: 220, w: 650, accent: '#7a4cf3', side: 'left' },
-      { title: 'Основы Backend', items: ['REST API & HTTP: методы (GET, POST, PUT, DELETE), статус-коды, заголовки, работа с JSON', 'Аутентификация: JWT-токены, OAuth, cookie/session, refresh-токены', 'Базы данных: основы SQL/NoSQL, структура таблиц, связи (один-ко-многим, многие-ко-многим)', 'API-дизайн: версионирование, пагинация, фильтрация, сортировка, обработка ошибок', 'Server-Side логика: валидация данных, middleware, rate limiting, CORS'], x: 580, y: 720, w: 760, align: 'right', accent: '#f7c743', side: 'right' },
+      { title: 'Командная работа', items: ['Agile-процессы: спринты, daily stand-ups, ретроспективы, планирование задач', 'Task Management: работа с Jira/Linear/Asana, декомпозиция задач, оценка Story Points', 'Kanban-flow: управление статусами задач (To Do -> In Progress -> Review -> Done), WIP-лимиты', 'Code Review: культура ревью кода, конструктивная обратная связь, соблюдение DoD (Definition of Done)', 'Коммуникация: документирование решений, синхронизация с командой, прозрачность блокеров'], x: 365, y: 220, w: 650, accent: '#6a58c8', side: 'left', accentLength: 160 },
+      { title: 'Основы Backend', items: ['REST API & HTTP: методы (GET, POST, PUT, DELETE), статус-коды, заголовки, работа с JSON', 'Аутентификация: JWT-токены, OAuth, cookie/session, refresh-токены', 'Базы данных: основы SQL/NoSQL, структура таблиц, связи (один-ко-многим, многие-ко-многим)', 'API-дизайн: версионирование, пагинация, фильтрация, сортировка, обработка ошибок', 'Server-Side логика: валидация данных, middleware, rate limiting, CORS'], x: 580, y: 720, w: 760, align: 'right', accent: '#ffd866', side: 'right', accentDirection: 'up', accentLength: 70 },
     ],
   },
 ]
