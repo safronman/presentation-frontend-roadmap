@@ -78,7 +78,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     path: 'M -60 470 C 100 395, 220 520, 390 555 C 570 590, 650 515, 760 600 C 880 690, 940 740, 1030 640 C 1125 535, 1210 455, 1290 595 C 1360 720, 1535 660, 1660 635 C 1805 605, 1870 735, 1980 695',
     icons: [
       { label: 'React', x: 575, y: 445, w: 155, h: 120, kind: 'logo', color: '#26c6e8' },
-      { label: 'useState', x: 960, y: 515, w: 190, h: 90, kind: 'badge', color: '#e9f4ff' },
+      { label: 'useState', x: 960, y: 515, w: 190, h: 140, kind: 'badge', color: '#e9f4ff', iconColor: '#000' },
       { label: 'TS', x: 1320, y: 615, w: 125, h: 125, kind: 'badge', color: '#3178c6' },
       { label: 'Data', x: 1640, y: 620, w: 120, h: 110, kind: 'emoji', color: '#0b89a8' },
     ],

@@ -67,7 +67,7 @@ const roadmapIconNames: Record<string, string> = {
   HTML5: 'ph:file-html',
   CSS: 'ph:file-css',
   React: 'ph:atom',
-  useState: 'ph:toggle-left',
+  useState: 'fluent-mdl2:dataflows-link',
   TS: 'ph:brackets-curly',
   Data: 'ph:database',
   'React Router': 'ph:map-trifold',
