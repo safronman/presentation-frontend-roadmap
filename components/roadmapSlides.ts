@@ -81,24 +81,24 @@ export const roadmapSlides: RoadmapSlideData[] = [
         w: 520,
         accent: '#f45b2b',
         side: 'left',
-        accentLength: 40
+        accentLength: 75
       },
       {
         title: 'Основы CSS',
         items: ['Селекторы', 'Свойства и значения', 'Единицы измерения'],
-        x: 1370,
-        y: 300,
+        x: 1320,
+        y: 330,
         w: 300,
         accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 20
+        accentLength: 30
       },
       {
         title: 'Семантика',
         items: ['Блочная модель (Box Model)', 'Position', 'Display'],
-        x: 1370,
-        y: 450,
+        x: 1320,
+        y: 480,
         w: 500,
         align: 'left',
         accent: '#0478bd',
@@ -109,9 +109,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Каскадность и продвинутые стили',
         items: ['Специфичность', 'Наследование', 'CSS-переменные'],
-        x: 1370,
-        y: 600,
-        w: 500,
+        x: 1320,
+        y: 630,
+        w: 600,
         accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
@@ -120,7 +120,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Grid и анимации',
         items: ['Flexbox', 'CSS Grid', 'Transitions и Animations'],
-        x: 1370,
+        x: 1320,
         y: 770,
         w: 500,
         align: 'left',
@@ -132,7 +132,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Cтилизация форм и таблиц',
         items: ['Стилизация форм', 'Стилизация таблиц', 'Адаптивная верстка'],
-        x: 1370,
+        x: 1320,
         y: 900,
         w: 500,
         accent: '#0478bd',
@@ -154,7 +154,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Базовый JS',
         items: ['Объекты', 'Функции', 'Деструктурирующие присваивания', 'Ассоциативный массив', 'Лексическое окружение', 'Замыкания',],
-        x: 475,
+        x: 465,
         y: 60,
         w: 530,
         accent: '#f7df1e',
@@ -163,7 +163,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Методы массивов, события',
         items: ['Работа с массивом (map, filter)', 'Callback', 'События (onClick, onChange, onBlur)', 'Имутабельность'],
-        x: 475,
+        x: 465,
         y: 280,
         w: 530,
         accent: '#f7df1e',
@@ -173,7 +173,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Асинхронное программирование',
         items: ['Promise', 'async-await, try catch', 'event loop'],
-        x: 475,
+        x: 465,
         y: 460,
         w: 530,
         accent: '#f7df1e',
@@ -182,7 +182,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'ООП',
         items: ['ООП: This, new, call, apply, bind', 'Классы (Class)', 'Прототипы (proto)', 'Observer, Publisher-Subscriber'],
-        x: 475,
+        x: 465,
         y: 620,
         w: 530,
         accent: '#f7df1e',
@@ -191,24 +191,24 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'Git',
-        items: ['Базовые команды: init, add, commit, push, pull', 'Командная работа: ветки, разрешение конфликтов', 'Code Review: создание PR, ревью чужого кода с комментариями', 'Автоматизация: Git Hooks (husky, lint-staged) для проверок перед коммитом'],
-        x: 1215,
-        y: 160,
-        w: 570,
+        items: ['Основы Git — репозиторий, коммиты, история изменений', 'Работа с ветками — создание, переключение, слияние', 'Командная работа — GitHub, Pull Request, Code Review', 'Синхронизация изменений — получение и отправка изменений', 'Разрешение конфликтов — merge conflicts и их исправление'],
+        x: 1120,
+        y: 260,
+        w: 700,
         accent: '#f25a4e',
         side: 'left',
         accentLength: 155
       },
       {
         title: 'GitHub',
-        items: ['Remote-репозитории: push, fetch, pull, настройка SSH-ключей', 'PR-процесс: создание PR, правки после ревью, разрешение конфликтов', 'Управление проектом: GitHub Projects (Kanban), Issues для трекинга задач', 'Профиль: оформление профиля как портфолио, поддержание активности'],
-        x: 1315,
+        items: ['Remote-репозитории: push, fetch, pull, настройка SSH-ключей', 'PR-процесс: создание PR, правки после ревью, разрешение конфликтов', 'Управление проектом: GitHub Projects (Kanban), Issues для трекинга задач'],
+        x: 1280,
         y: 705,
         w: 520,
         accent: '#111',
         side: 'right',
         accentDirection: 'up',
-        accentLength: 85
+        accentLength: 35
       },
     ],
   },
@@ -289,32 +289,32 @@ export const roadmapSlides: RoadmapSlideData[] = [
     blocks: [
       {
         title: 'React-router',
-        items: ['Роуты', 'Редиректы (useNavigate и Navigate)', 'Обработка ошибки 404', 'Работа с параметрами'],
+        items: ['Маршрутизация приложения — настройка страниц и URL', 'Навигация между страницами — Link, NavLink, useNavigate', 'Динамические маршруты — параметры URL (:id)', 'Вложенные маршруты — структура страниц через Outlet', 'Защита маршрутов — приватные и публичные страницы'],
         x: 150,
-        y: 660,
-        w: 360,
+        y: 820,
+        w: 760,
         accent: '#f44351',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 40
+        accentLength: 120
       },
       {
         title: 'Material UI',
-        items: ['Введение в Material UI', 'Подключение и использование библиотечных компонентов', 'Material UI: стандартные элементы ввода', 'Material UI: элементы сетки', 'Стилизация'],
-        x: 590,
-        y: 250,
-        w: 390,
+        items: ['Готовые UI-компоненты — кнопки, поля ввода, таблицы, модальные окна', 'Система стилизации — sx, styled, темы', 'Макеты и адаптивность — Grid, Stack, Container', 'Работа с формами — TextField, Select, Checkbox и другие элементы', 'Кастомизация дизайна — создание собственной темы и переопределение стилей'],
+        x: 545,
+        y: 260,
+        w: 700,
         align: 'left',
         accent: '#027af5',
         side: 'left',
         accentLength: 190
       },
       {
-        title: 'Компоненты / формы / таблицы',
-        items: ['Headless компоненты', 'Radix UI / Base UI', 'ShadCN', 'Работа с таблицами'],
+        title: 'Radix UI / Base UI',
+        items: ['Примитивы для интерфейсов — Dialog, Tooltip, Popover и др', 'Высокая доступность (A11y)', 'Полный контроль над стилями', 'Композиция сложных компонентов', 'Основа для собственных дизайн-систем'],
         x: 1030,
         y: 775,
-        w: 475,
+        w: 700,
         accent: '#130201',
         side: 'left',
         accentLength: 50,
@@ -322,14 +322,14 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'Storybook',
-        items: ['Введение в Storybook.', 'Тестирование React-компонентов (Snapshot/Screenshot)'],
-        x: 1545,
-        y: 260,
-        w: 290,
+        items: ['Изолированная разработка компонентов', 'Документирование UI-компонентов', 'Создание и просмотр Stories', 'Тестирование состояний компонентов', 'Построение дизайн-системы проекта'],
+        x: 1175,
+        y: 70,
+        w: 450,
         align: 'left',
         accent: '#ff4081',
-        side: 'left',
-        accentLength: 90
+        side: 'right',
+        accentLength: 180
       },
     ],
   },
@@ -345,14 +345,14 @@ export const roadmapSlides: RoadmapSlideData[] = [
     blocks: [
       {
         title: 'Redux Toolkit',
-        items: ['configureStore', 'createSlice', 'createAction', 'immerJS', 'createSelector', 'createAsyncThunk', 'обработка ошибок / rejectWithValue', 'builder (addCase, addMatcher)', 'matching utilities'],
+        items: ['Создание глобального состояния (createSlice)', 'Управление данными через actions и reducers', 'Асинхронные запросы через thunks', 'Получение данных через selectors', 'Масштабирование и организация state приложения'],
         x: 205,
-        y: 660,
-        w: 440,
+        y: 710,
+        w: 640,
         accent: '#5a3e89',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 72
+        accentLength: 90
       },
       {
         title: 'Тестирование',
@@ -496,10 +496,10 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'Linting & Formatting',
-        items: ['Prettier', 'ESlint', 'Stylelint', 'Husky', 'Работа с импортами'],
+        items: ['Prettier', 'ESlint', 'Stylelint', 'Git Hooks (husky, lint-staged)', 'Работа с импортами'],
         x: 1345,
         y: 800,
-        w: 360,
+        w: 560,
         accent: '#4b32bd',
         side: 'left',
         accentDirection: 'up',
@@ -508,12 +508,12 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Оптимизация приложения',
         items: ['React memo', 'useCallback', 'useMemo', 'Оптимизация рендеринга React-компонентов'],
-        x: 1400,
-        y: 160,
-        w: 360,
+        x: 1480,
+        y: 220,
+        w: 310,
         accent: '#5bb8ed',
         side: 'right',
-        accentLength: 185
+        accentLength: 150
       },
     ],
   },
@@ -521,24 +521,24 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 8,
     path: 'M -60 700 C 170 615, 245 790, 375 835 C 520 885, 650 790, 790 650 C 910 530, 955 520, 1085 505 C 1195 492, 1195 370, 1305 335 C 1450 288, 1650 325, 1980 435',
     icons: [
-      {label: 'Architecture', x: 45, y: 660, color: '#ffc94d'},
-      {label: 'Next.js', x: 1485, y: 125, color: '#111'},
+      {label: 'Architecture', x: 45, y: 610, color: '#59c4dc'},
+      {label: 'Next.js', x: 1485, y: 240, color: '#111'},
     ],
     blocks: [
       {
         title: 'Архитектура',
         items: ['Разделение ответственности: компонентная структура, разделение UI/логики/данных, принципы SOLID', 'State Management: выбор подхода (локальный state, Context, Zustand/Redux), избегание prop drilling', 'Масштабируемость: файловая структура проекта (feature-based/layer-based), переиспользуемые компоненты, UI-kit', 'Паттерны проектирования: Container/Presentational, Compound Components, Render Props, HOC', 'Производительность: code splitting, lazy loading, мемоизация, виртуализация списков'],
-        x: 165,
-        y: 160,
-        w: 730,
-        accent: '#ffc94d',
+        x: 105,
+        y: 210,
+        w: 1030,
+        accent: '#59c4dc',
         side: 'left',
         accentLength: 170
       },
       {
         title: 'Next.js',
         items: ['Маршрутизация: файловая структура, Layouts, Nested Routes, спецфайлы (loading.js, error.js, not-found.js)', 'RSC: разделение на серверные (по умолчанию) и клиентские (\'use client\') компоненты для минимизации бандла', 'Data Fetching: async/await в компонентах, управление кэшем (revalidateTag, revalidatePath)', 'Server Actions: обработка форм и мутаций без API-эндпоинтов и useEffect', 'Рендеринг: Static/Dynamic Rendering, PPR (Partial Prerendering)', 'Оптимизация: next/image, шрифты, скрипты, Turbopack для быстрой сборки'],
-        x: 880,
+        x: 930,
         y: 615,
         w: 700,
         accent: '#111',
