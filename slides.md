@@ -58,6 +58,25 @@ transition: fade
   text-align: center;
   letter-spacing: 0;
 }
+
+html:not(.roadmap-dark) .title-slide {
+  background: #fff;
+}
+
+html:not(.roadmap-dark) .title-slide-bg {
+  opacity: 0.2;
+  filter: saturate(0.82) contrast(1.02);
+}
+
+html:not(.roadmap-dark) .title-slide-overlay {
+  background:
+    radial-gradient(circle at 50% 44%, rgb(255 255 255 / 0.46), transparent 36%),
+    rgb(255 255 255 / 0.76);
+}
+
+html:not(.roadmap-dark) .title-slide h1 {
+  color: #111827;
+}
 </style>
 
 ---

@@ -20,7 +20,7 @@ function toggleRoadmapTheme() {
 }
 
 onMounted(() => {
-  setRoadmapTheme(localStorage.getItem(themeStorageKey) === 'dark' ? 'dark' : 'light')
+  setRoadmapTheme(localStorage.getItem(themeStorageKey) === 'light' ? 'light' : 'dark')
 })
 </script>
 
