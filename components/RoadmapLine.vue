@@ -28,7 +28,7 @@ onSlideEnter(() => {
           height="1080"
           :initial="{ width: 0 }"
           :animate="{ width: 1920 }"
-          :transition="{ duration: 2.4, ease: 'easeInOut' }"
+          :transition="{ duration: 2.64, ease: 'easeInOut' }"
         />
       </clipPath>
     </defs>
@@ -44,7 +44,7 @@ onSlideEnter(() => {
       :clip-path="`url(#${clipId})`"
       :initial="{ strokeDashoffset: 42, opacity: 0.25 }"
       :animate="{ strokeDashoffset: 0, opacity: 1 }"
-      :transition="{ duration: 2.4, ease: 'easeInOut' }"
+      :transition="{ duration: 2.64, ease: 'easeInOut' }"
     />
   </svg>
 </template>
