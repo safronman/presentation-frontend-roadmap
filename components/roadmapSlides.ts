@@ -552,41 +552,42 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 9,
     path: 'M -60 490 C 185 335, 330 380, 485 505 C 600 600, 665 575, 740 615 C 840 665, 910 805, 1040 775 C 1140 750, 1190 680, 1185 805 C 1180 950, 1320 1010, 1435 960 C 1545 910, 1580 800, 1690 780 C 1825 755, 1880 810, 1980 720',
     icons: [
-      {label: 'AI', x: 140, y: 305, color: '#695bc4'},
-      {label: 'DEVOPS', x: 950, y: 690, color: '#111'},
-      {label: 'Security', x: 1685, y: 695, color: '#42c66d'},
+      {label: 'Backend', x: 140, y: 305, color: '#2E7D32'},
+      {label: 'Security', x: 950, y: 690, color: '#0668a0'},
+      {label: 'DEVOPS', x: 1685, y: 695, color: '#024ac5'},
     ],
     blocks: [
       {
-        title: 'AI-инструменты',
-        items: ['AI-IDE: Cursor / Claude Code / Codex / Warp', 'Prompt Engineering: контекстные промпты, .cursorrules для передачи стайл-гайда и стека проекта', 'AI-UI: генерация React-компонентов из скриншотов/макетов', 'Рефакторинг: поиск узких мест, объяснение legacy-кода, автофикс ошибок по логам', 'AI-тестирование: автогенерация тестов (Vitest, Playwright), моковых данных и граничных случаев', 'Верификация: критическая проверка AI-кода на галлюцинации, уязвимости и соответствие бизнес-логике', 'Документация: автогенерация docs и схем данных (Zod/TypeScript) из описаний API'],
-        x: 250,
-        y: 590,
+        title: 'Основы Backend',
+        items: ['REST API & HTTP: методы (GET, POST, PUT, DELETE), статус-коды, заголовки, работа с JSON', 'Аутентификация: JWT-токены, OAuth, cookie/session, refresh-токены', 'Базы данных: основы SQL/NoSQL, структура таблиц, связи (один-ко-многим, многие-ко-многим)', 'API-дизайн: версионирование, пагинация, фильтрация, сортировка, обработка ошибок', 'Server-Side логика: валидация данных, middleware, rate limiting, CORS'],
+        x: 180,
+        y: 710,
         w: 610,
-        accent: '#695bc4',
+        accent: '#2E7D32',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 80
-      },
-      {
-        title: 'DevOps',
-        items: ['CI/CD: автозапуск тестов и сборки через GitHub Actions/GitLab CI, блокировка деплоя при падении тестов', 'Deployment: работа с Vercel. Preview-деплои для каждой ветки', 'Docker: контейнеризация SSR-приложений (Next.js, Remix)', 'Environment Variables: управление секретами и .env для dev/staging/prod'],
-        x: 435,
-        y: 160,
-        w: 620,
-        accent: '#111',
-        side: 'right',
-        accentLength: 135
+        accentLength: 120
       },
       {
         title: 'Security',
-        items: ['XSS & Injection: защита от внедрения скриптов, санитизация пользовательского ввода, использование dangerouslySetInnerHTML только с очисткой', 'Аутентификация: безопасное хранение токенов (httpOnly cookies vs localStorage), защита от CSRF-атак', 'HTTPS & CORS: работа только по HTTPS, понимание политик CORS и Content Security Policy (CSP)', 'Секреты: никогда не хранить API-ключи и токены в коде, использование environment variables', 'Валидация: проверка данных на клиенте и сервере, не доверять клиентским данным'],
-        x: 1080,
+        items: ['Защита от XSS и CSRF атак', 'Безопасная работа с токенами и куками (JWT, HttpOnly, Secure)', 'Настройка Content Security Policy (CSP) и CORS', 'Валидация и санитизация пользовательского ввода', 'Аудит зависимостей и уязвимостей (npm audit, Snyk)'],
+        x: 435,
+        y: 110,
+        w: 620,
+        accent: '#0668a0',
+        side: 'right',
+        accentLength: 280
+      },
+      {
+        title: 'DevOps',
+        items: ['Автоматизация CI/CD пайплайнов (GitHub Actions, Vercel, Netlify)', 'Контейнеризация фронтенд-приложений с Docker', 'Мониторинг и логирование ошибок в продакшне (Sentry, Datadog)', 'Управление окружениями и переменными (env, staging, production)', 'Оптимизация сборки и деплоя (кэширование, CDN, bundle analysis)'
+        ],
+        x: 1180,
         y: 240,
         w: 650,
-        accent: '#42c66d',
+        accent: '#024ac5',
         side: 'right',
-        accentLength: 160
+        accentLength: 205
       },
     ],
   },
@@ -594,31 +595,31 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 10,
     path: 'M -60 555 C 115 720, 220 835, 370 845 C 500 855, 540 790, 620 700 C 735 570, 820 560, 980 520 C 1110 488, 1145 315, 1300 300 C 1475 285, 1605 405, 1665 535 C 1682 565, 1704 570, 1723 550',
     icons: [
-      {label: 'Team', x: 190, y: 685, color: '#6a58c8'},
-      {label: 'Backend', x: 1260, y: 160, color: '#ffd866'},
+      {label: 'Team', x: 190, y: 710, color: '#13c1eb'},
+      {label: 'AI', x: 1460, y: 260, color: '#c505bc'},
       {label: 'Finish', x: 1648, y: 475, color: '#40e02e'},
     ],
     blocks: [
       {
         title: 'Командная работа',
         items: ['Agile-процессы: спринты, daily stand-ups, ретроспективы, планирование задач', 'Task Management: работа с Jira/Linear/Asana, декомпозиция задач, оценка Story Points', 'Kanban-flow: управление статусами задач (To Do -> In Progress -> Review -> Done), WIP-лимиты', 'Code Review: культура ревью кода, конструктивная обратная связь, соблюдение DoD (Definition of Done)', 'Коммуникация: документирование решений, синхронизация с командой, прозрачность блокеров'],
-        x: 365,
+        x: 200,
         y: 220,
-        w: 650,
-        accent: '#6a58c8',
+        w: 750,
+        accent: '#13c1eb',
         side: 'left',
-        accentLength: 160
+        accentLength: 230
       },
       {
-        title: 'Основы Backend',
-        items: ['REST API & HTTP: методы (GET, POST, PUT, DELETE), статус-коды, заголовки, работа с JSON', 'Аутентификация: JWT-токены, OAuth, cookie/session, refresh-токены', 'Базы данных: основы SQL/NoSQL, структура таблиц, связи (один-ко-многим, многие-ко-многим)', 'API-дизайн: версионирование, пагинация, фильтрация, сортировка, обработка ошибок', 'Server-Side логика: валидация данных, middleware, rate limiting, CORS'],
-        x: 580,
-        y: 720,
-        w: 760,
-        accent: '#ffd866',
+        title: 'AI-инструменты',
+        items: ['Генерация и рефакторинг кода через AI-агентов (Codex, Claude code)', 'Подключение MCP-серверов для работы с внешними сервисами', 'Использование готовых skills/промптов для типовых задач (тесты, документация, ревью)', 'Эффективный промтинг — как правильно ставить задачи AI для точного результата'],
+        x: 860,
+        y: 620,
+        w: 700,
+        accent: '#c505bc',
         side: 'right',
         accentDirection: 'up',
-        accentLength: 90
+        accentLength: 100
       },
     ],
   },

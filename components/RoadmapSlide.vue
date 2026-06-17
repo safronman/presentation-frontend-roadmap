@@ -102,11 +102,11 @@ const roadmapIconNames: Record<string, string> = {
   Optimization: 'file-icons:config-react',
   Architecture: 'logos:create-react-app',
   'Next.js': 'ri:nextjs-fill',
-  AI: 'ph:sparkle',
   DEVOPS: 'clarity:ci-cd-line',
   Security: 'ph:shield-check',
-  Team: 'ph:users-three',
   Backend: 'hugeicons:database-locked',
+  Team: 'ph:users-three',
+  AI: 'ph:sparkle',
   Finish: 'gis:flag-finish-b-o',
 }
 
