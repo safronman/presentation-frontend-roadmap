@@ -20,7 +20,7 @@ export type RoadmapIcon = {
   y?: number
   w?: number
   h?: number
-  kind?: 'emoji' | 'badge' | 'logo'
+  kind?: 'emoji' | 'badge' | 'logo' | 'milestone'
   color?: string
 }
 
@@ -37,7 +37,7 @@ export type RoadmapSlideData = {
 export const roadmapSlides: RoadmapSlideData[] = [
   {
     id: 1,
-    avatar: '👶',
+    avatar: '👨‍🚀',
     avatarColor: '#ccfb50',
     path: 'M 250 515 C 370 455, 445 500, 520 615 C 575 700, 620 765, 660 795 C 780 890, 980 690, 1120 535 C 1235 410, 1290 255, 1370 150 C 1460 265, 1615 315, 1745 360 C 1845 395, 1915 405, 1980 420',
     icons: [
@@ -597,7 +597,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     icons: [
       {label: 'Team', x: 190, y: 710, color: '#13c1eb'},
       {label: 'AI', x: 1460, y: 260, color: '#c505bc'},
-      {label: 'Finish', x: 1648, y: 475, color: '#40e02e'},
+      {label: 'Finish', icon: 'ph:flag-checkered', x: 1573, y: 400, w: 300, h: 300, kind: 'milestone', color: '#ccfb50', iconColor: '#050505'},
     ],
     blocks: [
       {

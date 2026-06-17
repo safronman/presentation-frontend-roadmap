@@ -60,7 +60,7 @@ function accentStyle(block: RoadmapTextBlock) {
 }
 
 const avatarIcons: Record<number, string> = {
-  1: 'ph:rocket-launch',
+  1: 'fluent:rocket-32-regular',
   2: 'ph:student',
   3: 'ph:routes',
   4: 'ph:database',
@@ -387,6 +387,20 @@ function iconName(icon: RoadmapIcon) {
 .icon-logo,
 .icon-emoji {
   background: color-mix(in srgb, var(--icon-color) 9%, var(--roadmap-bg));
+}
+
+.icon-milestone {
+  padding: 0;
+  border: 0;
+  border-radius: 10%;
+  background: var(--icon-color);
+  color: var(--icon-symbol-color);
+  box-shadow: 0 16px 36px var(--roadmap-icon-shadow);
+}
+
+.icon-milestone .roadmap-icon-symbol {
+  width: 54%;
+  height: 54%;
 }
 
 @media (prefers-reduced-motion: reduce) {
