@@ -595,8 +595,8 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 10,
     path: 'M -60 555 C 115 720, 220 835, 370 845 C 500 855, 540 790, 620 700 C 735 570, 820 560, 980 520 C 1110 488, 1145 315, 1300 300 C 1475 285, 1605 405, 1665 535 C 1682 565, 1704 570, 1723 550',
     icons: [
-      {label: 'Team', x: 190, y: 710, color: '#13c1eb'},
-      {label: 'AI', x: 1460, y: 260, color: '#c505bc'},
+      {label: 'Team', x: 150, y: 710, color: '#13c1eb'},
+      {label: 'AI', x: 1260, y: 260, color: '#c505bc'},
       {label: 'Finish', icon: 'ph:flag-checkered', x: 1573, y: 400, w: 300, h: 300, kind: 'milestone', color: '#ccfb50', iconColor: '#050505'},
     ],
     blocks: [
@@ -613,13 +613,13 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'AI-инструменты',
         items: ['Генерация и рефакторинг кода через AI-агентов (Codex, Claude code)', 'Подключение MCP-серверов для работы с внешними сервисами', 'Использование готовых skills/промптов для типовых задач (тесты, документация, ревью)', 'Эффективный промтинг — как правильно ставить задачи AI для точного результата'],
-        x: 860,
-        y: 620,
+        x: 690,
+        y: 720,
         w: 700,
         accent: '#c505bc',
         side: 'right',
         accentDirection: 'up',
-        accentLength: 100
+        accentLength: 150
       },
     ],
   },
