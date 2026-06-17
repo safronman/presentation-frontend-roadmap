@@ -262,13 +262,13 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'Тестирование',
-        items: ['Работа с Jest / Vitest', 'Покрытие редьюсера тестами', 'Test Driven Development (TDD)', 'Playwright'],
+        items: ['Написание unit-тестов для функций и компонентов', 'Тестирование пользовательских сценариев', 'Test Driven Development (TDD)', 'Playwright', 'Автоматический запуск тестов в CI/CD'],
         x: 700,
-        y: 105,
-        w: 400,
+        y: 250,
+        w: 500,
         accent: '#46ba4c',
         side: 'left',
-        accentLength: 205
+        accentLength: 130
       },
       {
         title: 'Взаимодействие с сервером',
@@ -283,13 +283,13 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'WebSocket',
-        items: ['Постоянное соединение клиента и сервера', 'Передача данных в реальном времени без задержек'],
-        x: 1420,
-        y: 200,
-        w: 300,
+        items: ['Установка постоянного соединения с сервером', 'Обмен данными в реальном времени', 'Отправка сообщений от клиента к серверу', 'Получение событий от сервера без перезапросов', 'Автоматическое обновление интерфейса при изменении данных'],
+        x: 1220,
+        y: 100,
+        w: 550,
         accent: '#131414',
         side: 'right',
-        accentLength: 135
+        accentLength: 205
       },
     ],
   },
@@ -309,7 +309,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
         items: ['Отображение индикатора загрузки (Loader) во время запросов', 'Хранение статуса запроса в Redux (idle, loading, succeeded, failed)', 'Управление отображением загрузки для улучшения пользовательского опыта.', 'Disable кнопок и компонент, как часть правильного UX'],
         x: 143,
         y: 750,
-        w: 440,
+        w: 540,
         accent: '#d1b404',
         side: 'left',
         accentDirection: 'up',
@@ -318,9 +318,9 @@ export const roadmapSlides: RoadmapSlideData[] = [
       {
         title: 'Обработка ошибок',
         items: ['Отображение ошибок пользователю через ErrorSnackbar', 'Обработка сетевых ошибок (Network Error) в блоке catch', 'Обработка ошибок сервера через resultCode', 'Централизация логики в утилитах handleServerNetworkError и handleServerAppError', 'Хранение и управление ошибками через глобальный state (Redux)'],
-        x: 443,
-        y: 80,
-        w: 440,
+        x: 410,
+        y: 90,
+        w: 540,
         accent: '#d11031',
         side: 'left',
         accentLength: 145
@@ -330,7 +330,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
         items: ['Управление состоянием формы через useForm', 'Регистрация полей через register', 'Обработка отправки формы через handleSubmit', 'Встроенная валидация и отображение ошибок', 'Интеграция со сложными компонентами через Controller'],
         x: 770,
         y: 780,
-        w: 420,
+        w: 620,
         accent: '#ec4c8a',
         side: 'left',
         accentDirection: 'up',
@@ -340,11 +340,11 @@ export const roadmapSlides: RoadmapSlideData[] = [
         title: 'Zod',
         items: ['Валидация данных в runtime', 'Автоматическая генерация TypeScript-типов', 'Удобная интеграция с React Hook Form', 'Проверка и защита от ошибок backend API', 'Гибкая обработка ошибок и поддержка сложных типов данных'],
         x: 1055,
-        y: 30,
-        w: 420,
+        y: 70,
+        w: 720,
         accent: '#3e7aff',
         side: 'left',
-        accentLength: 120
+        accentLength: 90
       },
       {
         title: 'Auth flow',
@@ -362,53 +362,64 @@ export const roadmapSlides: RoadmapSlideData[] = [
     id: 6,
     path: 'M -60 540 C 155 455, 275 545, 395 665 C 505 775, 580 555, 705 425 C 820 305, 950 440, 1065 555 C 1195 685, 1210 680, 1320 620 C 1460 545, 1580 555, 1690 625 C 1800 695, 1860 665, 1980 645',
     icons: [
-      {label: 'RTK Query', x: 265, y: 650, color: '#764abc'},
-      {label: 'TanStack + Zustand', x: 445, y: 255, color: '#28a45b'},
-      {label: '+ ESLint', x: 1200, y: 500, color: '#4b32bd'},
-      {label: '⚙', x: 1665, y: 535, color: '#5bb8ed'},
+      {label: 'RTKQuery', x: 80, y: 420, color: '#764abc'},
+      {label: 'TanStack', x: 405, y: 575, color: '#fc532b'},
+      {label: 'Zustand', x: 745, y: 330, color: '#783110'},
+      {label: 'ESLint', x: 1280, y: 500, color: '#4b32bd'},
+      {label: 'Optimization', x: 1680, y: 555, color: '#5bb8ed'},
     ],
     blocks: [
       {
         title: 'RTK Query',
         items: ['Query запросы (Get)', 'Mutation запросы (Post, Delete, Put)', 'Conditional fetching', 'Кеширование и обновление данных', 'Обработка ошибок', 'Optimistic update'],
-        x: 185,
-        y: 190,
-        w: 240,
+        x: 120,
+        y: 700,
+        w: 440,
         accent: '#764abc',
-        side: 'right',
-        accentLength: 225
+        accentDirection: 'up',
+        accentLength: 50
       },
       {
-        title: 'TanStack & Zustand',
-        items: ['TanStack Query: управление server state (fetching, caching, синхронизация), автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching, optimistic updates для мгновенного UI', 'Zustand: легковесный state manager для client state, минималистичный API без boilerplate', 'Разделение состояния: TanStack Query для серверных данных, Zustand для UI-состояния и глобальных настроек'],
-        x: 605,
+        title: 'TanStack',
+        items: ['TanStack Query: управление server state (fetching, caching, синхронизация)',' Автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching', 'Optimistic updates для мгновенного UI',],
+        x: 475,
+        y: 140,
+        w: 620,
+        accent: '#fc532b',
+        side: 'left',
+        accentLength: 205
+      },
+      {
+        title: 'Zustand',
+        items: ['Создание глобального состояния', 'Работа со store без Provider', 'Обновление состояния через actions', 'Подписка компонентов на изменения', 'Простое управление UI-состоянием'],
+        x: 785,
         y: 640,
         w: 620,
-        accent: '#28a45b',
+        accent: '#783110',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 135
+        accentLength: 75
       },
       {
-        title: 'Code style',
-        items: ['Prettier', 'ESlint', 'Stylelint', 'Работа с импортами'],
-        x: 1365,
-        y: 780,
+        title: 'Linting & Formatting',
+        items: ['Prettier', 'ESlint', 'Stylelint', 'Husky', 'Работа с импортами'],
+        x: 1345,
+        y: 800,
         w: 360,
         accent: '#4b32bd',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 90
+        accentLength: 70
       },
       {
         title: 'Оптимизация приложения',
         items: ['React memo', 'useCallback', 'useMemo', 'Оптимизация рендеринга React-компонентов'],
-        x: 1480,
+        x: 1400,
         y: 160,
         w: 360,
         accent: '#5bb8ed',
         side: 'right',
-        accentLength: 195
+        accentLength: 185
       },
     ],
   },
