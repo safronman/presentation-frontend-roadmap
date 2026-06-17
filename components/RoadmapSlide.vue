@@ -73,8 +73,8 @@ const avatarIcons: Record<number, string> = {
 }
 
 const roadmapIconNames: Record<string, string> = {
-  HTML5: 'ph:file-html',
-  CSS: 'ph:file-css',
+  HTML5: 'flowbite:html-solid',
+  CSS: 'flowbite:css-solid',
   React: 'logos:react',
   useState: 'catppuccin:folder-hooks-open',
   TS: 'ph:file-ts',
@@ -97,7 +97,7 @@ const roadmapIconNames: Record<string, string> = {
   Zustand: 'devicon-plain:zustand',
   ESLint: 'mdi:eslint',
   Optimization: 'file-icons:config-react',
-  JavaScript: 'ph:file-js',
+  JavaScript: 'bi:javascript',
   Git: 'ph:git-branch',
   GitHub: 'ph:github-logo',
   Architecture: 'game-icons:metal-scales',

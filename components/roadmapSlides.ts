@@ -41,85 +41,179 @@ export const roadmapSlides: RoadmapSlideData[] = [
     avatarColor: '#ccfb50',
     path: 'M -60 530 C 170 455, 310 455, 420 520 C 540 690, 655 710, 820 660 C 980 615, 1045 515, 1185 425 C 1325 335, 1485 340, 1625 375 C 1760 410, 1845 415, 1980 420',
     icons: [
-      {label: 'HTML5', x: 610, y: 625, color: '#f05a28'},
-      {label: 'CSS', x: 1405, y: 300, color: '#643395'},
+      {label: 'HTML5', x: 590, y: 725, color: '#f05a28'},
+      {label: 'CSS', x: 1300, y: 80, color: '#0478bd'},
     ],
     blocks: [
       {title: 'Старт', x: 180, y: 270, w: 300, size: 'lg'},
       {
         title: 'Основы HTML',
-        items: ['Что такое HTML?', 'Структура HTML-документа', 'Семантика'],
-        x: 670,
-        y: 140,
+        items: ['Что такое HTML', 'Структура HTML-документа', 'Семантическая верстка'],
+        x: 650,
+        y: 80,
         w: 430,
         accent: '#f45b2b',
         side: 'left',
       },
       {
-        title: 'Теги и их атрибуты',
-        items: ['Заголовки и подзаголовки', 'Текст', 'Ссылки', 'Изображения', 'Списки (маркированные, нумерованные)', 'Таблицы', 'Формы и элементы управления'],
-        x: 670,
-        y: 340,
+        title: 'Работа с контентом',
+        items: ['Заголовки и текст', 'Ссылки и изображения', 'Списки и таблицы'],
+        x: 650,
+        y: 240,
         w: 520,
         accent: '#f45b2b',
         side: 'left',
       },
       {
+        title: 'Формы и взаимодействие',
+        items: ['Поля ввода', 'Кнопки и элементы управления', 'Валидация форм'],
+        x: 650,
+        y: 400,
+        w: 520,
+        accent: '#f45b2b',
+        side: 'left',
+      },
+      {
+        title: 'Современный HTML',
+        items: ['Accessibility (A11y)', 'SEO-основы', 'Метаданные'],
+        x: 650,
+        y: 540,
+        w: 520,
+        accent: '#f45b2b',
+        side: 'left',
+        accentLength: 40
+      },
+      {
         title: 'Основы CSS',
-        x: 1470,
-        y: 500,
+        items: ['Селекторы', 'Свойства и значения', 'Единицы измерения'],
+        x: 1370,
+        y: 300,
         w: 300,
-        accent: '#643395',
+        accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
         accentLength: 20
       },
       {
         title: 'Семантика',
-        x: 1470,
-        y: 560,
-        w: 250,
+        items: ['Блочная модель (Box Model)', 'Position', 'Display'],
+        x: 1370,
+        y: 450,
+        w: 500,
         align: 'left',
-        accent: '#643395',
+        accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 30
+        accentLength: 90
       },
       {
         title: 'Каскадность и продвинутые стили',
-        x: 1470,
-        y: 620,
-        w: 335,
-        accent: '#643395',
+        items: ['Специфичность', 'Наследование', 'CSS-переменные'],
+        x: 1370,
+        y: 600,
+        w: 500,
+        accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 32
+        accentLength: 90
       },
       {
         title: 'Grid и анимации',
-        x: 1470,
-        y: 720,
-        w: 280,
+        items: ['Flexbox', 'CSS Grid', 'Transitions и Animations'],
+        x: 1370,
+        y: 770,
+        w: 500,
         align: 'left',
-        accent: '#643395',
+        accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 52
+        accentLength: 90
       },
       {
         title: 'Cтилизация форм и таблиц',
-        x: 1470,
-        y: 780,
-        w: 340,
-        accent: '#643395',
+        items: ['Стилизация форм', 'Стилизация таблиц', 'Адаптивная верстка'],
+        x: 1370,
+        y: 900,
+        w: 500,
+        accent: '#0478bd',
         side: 'left',
         accentDirection: 'up',
-        accentLength: 50
+        accentLength: 90
       },
     ],
   },
   {
     id: 2,
+    path: 'M -60 430 C 140 345, 220 555, 330 670 C 455 800, 430 930, 585 885 C 735 840, 1015 850, 1100 760 C 1195 660, 1165 610, 1345 575 C 1515 545, 1655 420, 1765 555 C 1845 650, 1875 650, 1980 640',
+    icons: [
+      {label: 'JavaScript', x: 400, y: 795, color: '#f7df1e'},
+      {label: 'Git', x: 1065, y: 610, color: '#f25a4e'},
+      {label: 'GitHub', x: 1665, y: 470, color: '#111'},
+    ],
+    blocks: [
+      {
+        title: 'Базовый JS',
+        items: ['Объекты', 'Функции', 'Деструктурирующие присваивания', 'Ассоциативный массив', 'Лексическое окружение', 'Замыкания',],
+        x: 475,
+        y: 60,
+        w: 530,
+        accent: '#f7df1e',
+        accentLength: 120
+      },
+      {
+        title: 'Методы массивов, события',
+        items: ['Работа с массивом (map, filter)', 'Callback', 'События (onClick, onChange, onBlur)', 'Имутабельность'],
+        x: 475,
+        y: 280,
+        w: 530,
+        accent: '#f7df1e',
+        side: 'left',
+        accentLength: 160
+      },
+      {
+        title: 'Асинхронное программирование',
+        items: ['Promise', 'async-await, try catch', 'event loop'],
+        x: 475,
+        y: 460,
+        w: 530,
+        accent: '#f7df1e',
+        accentLength: 150
+      },
+      {
+        title: 'ООП',
+        items: ['ООП: This, new, call, apply, bind', 'Классы (Class)', 'Прототипы (proto)', 'Observer, Publisher-Subscriber'],
+        x: 475,
+        y: 620,
+        w: 530,
+        accent: '#f7df1e',
+        side: 'left',
+        accentLength: 70
+      },
+      {
+        title: 'Git',
+        items: ['Базовые команды: init, add, commit, push, pull', 'Командная работа: ветки, разрешение конфликтов', 'Code Review: создание PR, ревью чужого кода с комментариями', 'Автоматизация: Git Hooks (husky, lint-staged) для проверок перед коммитом'],
+        x: 1215,
+        y: 160,
+        w: 570,
+        accent: '#f25a4e',
+        side: 'left',
+        accentLength: 155
+      },
+      {
+        title: 'GitHub',
+        items: ['Remote-репозитории: push, fetch, pull, настройка SSH-ключей', 'PR-процесс: создание PR, правки после ревью, разрешение конфликтов', 'Управление проектом: GitHub Projects (Kanban), Issues для трекинга задач', 'Профиль: оформление профиля как портфолио, поддержание активности'],
+        x: 1315,
+        y: 705,
+        w: 520,
+        accent: '#111',
+        side: 'right',
+        accentDirection: 'up',
+        accentLength: 85
+      },
+    ],
+  },
+  {
+    id: 3,
     path: 'M -60 470 C 100 395, 220 520, 390 555 C 570 590, 650 515, 760 600 C 880 690, 940 740, 1030 640 C 1125 535, 1210 455, 1290 595 C 1360 720, 1535 660, 1660 635 C 1805 605, 1870 735, 1980 695',
     icons: [
       {label: 'React', x: 100, y: 430, color: '#26c6e8'},
@@ -184,7 +278,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     path: 'M -60 555 C 150 430, 300 405, 430 535 C 545 655, 610 825, 755 720 C 875 630, 835 470, 1010 500 C 1160 530, 1115 785, 1290 720 C 1445 660, 1505 455, 1670 515 C 1810 565, 1800 655, 1980 640',
     icons: [
       {label: 'React Router', x: 120, y: 405, color: '#f44351'},
@@ -240,7 +334,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     path: 'M -60 520 C 135 405, 280 365, 415 470 C 545 570, 585 685, 735 625 C 875 570, 900 440, 1045 500 C 1170 550, 1145 700, 1280 640 C 1435 570, 1500 500, 1635 555 C 1770 610, 1815 720, 1980 645',
     icons: [
       {label: 'Redux Toolkit', x: 145, y: 370, color: '#5a3e89'},
@@ -294,7 +388,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     path: 'M -60 500 C 180 360, 325 350, 455 490 C 565 610, 640 650, 760 585 C 910 505, 1000 385, 1145 350 C 1280 320, 1360 340, 1390 455 C 1435 620, 1365 760, 1515 790 C 1665 820, 1785 675, 1980 485',
     icons: [
       {label: 'Loaders', x: 70, y: 305, color: '#d1b404'},
@@ -348,7 +442,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'Auth flow',
-        items: [ 'Реализация авторизационного Flow (login, logout, authMe)', 'Axios interceptors', 'Protected routes', 'Bearer token'],
+        items: ['Реализация авторизационного Flow (login, logout, authMe)', 'Axios interceptors', 'Protected routes', 'Bearer token'],
         x: 1470,
         y: 370,
         w: 310,
@@ -359,7 +453,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     path: 'M -60 540 C 155 455, 275 545, 395 665 C 505 775, 580 555, 705 425 C 820 305, 950 440, 1065 555 C 1195 685, 1210 680, 1320 620 C 1460 545, 1580 555, 1690 625 C 1800 695, 1860 665, 1980 645',
     icons: [
       {label: 'RTKQuery', x: 80, y: 420, color: '#764abc'},
@@ -381,7 +475,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
       },
       {
         title: 'TanStack',
-        items: ['TanStack Query: управление server state (fetching, caching, синхронизация)',' Автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching', 'Optimistic updates для мгновенного UI',],
+        items: ['TanStack Query: управление server state (fetching, caching, синхронизация)', ' Автоматическая инвалидация и refetch данных', 'Query оптимизация: staleTime, cacheTime, prefetching', 'Optimistic updates для мгновенного UI',],
         x: 475,
         y: 140,
         w: 620,
@@ -420,79 +514,6 @@ export const roadmapSlides: RoadmapSlideData[] = [
         accent: '#5bb8ed',
         side: 'right',
         accentLength: 185
-      },
-    ],
-  },
-  {
-    id: 7,
-    path: 'M -60 430 C 140 345, 220 555, 330 670 C 455 800, 430 930, 585 885 C 735 840, 1015 850, 1100 760 C 1195 660, 1165 610, 1345 575 C 1515 545, 1655 420, 1765 555 C 1845 650, 1875 650, 1980 640',
-    icons: [
-      {label: 'JavaScript', x: 400, y: 795, color: '#f7df1e'},
-      {label: 'Git', x: 1065, y: 610, color: '#f25a4e'},
-      {label: 'GitHub', x: 1665, y: 470, color: '#111'},
-    ],
-    blocks: [
-      {
-        title: 'Введение',
-        items: ['Объекты', 'Функции', 'Деструктурирующие присваивания', 'Ассоциативный массив'],
-        x: 60,
-        y: 180,
-        w: 430,
-        accent: '#f7df1e',
-        side: 'right',
-        accentLength: 90
-      },
-      {
-        title: 'Замыкания и асинхронное программирование',
-        items: ['Лексическое окружение', 'Замыкания', 'Promise', 'async-await, try catch', 'event loop'],
-        x: 60,
-        y: 355,
-        w: 430,
-        accent: '#f7df1e',
-        side: 'right',
-        accentLength: 150
-      },
-      {
-        title: 'Работа с массивами и функции высшего порядка',
-        items: ['Работа с массивом (map, filter)', 'Callback', 'События (onClick, onChange, onBlur)', 'Имутабельность'],
-        x: 510,
-        y: 190,
-        w: 490,
-        accent: '#f7df1e',
-        side: 'left',
-        accentLength: 160
-      },
-      {
-        title: 'Объектно-ориентированное программирование',
-        items: ['ООП: This, new, call, apply, bind', 'Классы (Class)', 'Прототипы (proto)', 'Observer, Publisher-Subscriber'],
-        x: 510,
-        y: 480,
-        w: 480,
-        accent: '#f7df1e',
-        side: 'left',
-        accentDirection: 'up',
-        accentLength: 35
-      },
-      {
-        title: 'Git',
-        items: ['Базовые команды: init, add, commit, push, pull', 'Командная работа: ветки, разрешение конфликтов', 'Code Review: создание PR, ревью чужого кода с комментариями', 'Автоматизация: Git Hooks (husky, lint-staged) для проверок перед коммитом'],
-        x: 1215,
-        y: 160,
-        w: 570,
-        accent: '#f25a4e',
-        side: 'left',
-        accentLength: 155
-      },
-      {
-        title: 'GitHub',
-        items: ['Remote-репозитории: push, fetch, pull, настройка SSH-ключей', 'PR-процесс: создание PR, правки после ревью, разрешение конфликтов', 'Управление проектом: GitHub Projects (Kanban), Issues для трекинга задач', 'Профиль: оформление профиля как портфолио, поддержание активности'],
-        x: 1315,
-        y: 705,
-        w: 520,
-        accent: '#111',
-        side: 'right',
-        accentDirection: 'up',
-        accentLength: 85
       },
     ],
   },
