@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import {computed, onMounted, ref} from 'vue'
+import {computed} from 'vue'
 import {Icon} from '@iconify/vue'
 import RoadmapLine from './RoadmapLine.vue'
 import {roadmapSlides, type RoadmapIcon, type RoadmapTextBlock} from './roadmapSlides'
-
-const themeStorageKey = 'frontend-roadmap-theme'
-const isDarkTheme = ref(false)
 
 const defaultIcon = {
   x: 150,
@@ -48,20 +45,6 @@ function isDarkColor(color?: string) {
 
   return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000 < 72
 }
-
-function setRoadmapTheme(theme: 'light' | 'dark') {
-  isDarkTheme.value = theme === 'dark'
-  document.documentElement.classList.toggle('roadmap-dark', isDarkTheme.value)
-  localStorage.setItem(themeStorageKey, theme)
-}
-
-function toggleRoadmapTheme() {
-  setRoadmapTheme(isDarkTheme.value ? 'light' : 'dark')
-}
-
-onMounted(() => {
-  setRoadmapTheme(localStorage.getItem(themeStorageKey) === 'dark' ? 'dark' : 'light')
-})
 
 function xPct(value: number) {
   return `${value / 19.2}%`
@@ -169,17 +152,6 @@ function iconName(icon: RoadmapIcon) {
   <section class="roadmap-stage">
     <RoadmapLine :path="slide.path" :slide-id="slide.id" color="#7c3aed"/>
 
-    <button
-        v-if="slide.id === 1"
-        class="theme-toggle"
-        type="button"
-        :aria-label="isDarkTheme ? 'Переключить на светлую тему' : 'Переключить на темную тему'"
-        :title="isDarkTheme ? 'Светлая тема' : 'Темная тема'"
-        @click="toggleRoadmapTheme"
-    >
-      <Icon :icon="isDarkTheme ? 'ph:sun' : 'ph:moon-stars'"/>
-    </button>
-
     <div v-if="slide.avatar" class="avatar-panel" :style="{ backgroundColor: slide.avatarColor }">
       <Icon class="avatar-icon" :icon="avatarIcons[slide.id] ?? 'ph:rocket-launch'"/>
     </div>
@@ -247,33 +219,6 @@ function iconName(icon: RoadmapIcon) {
   --roadmap-muted: #a8b0bd;
   --roadmap-level: #b5becd;
   --roadmap-icon-shadow: rgb(0 0 0 / 0.32);
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 24px;
-  right: 28px;
-  z-index: 8;
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  padding: 0;
-  border: 1px solid color-mix(in srgb, var(--roadmap-text) 16%, transparent);
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--roadmap-bg) 88%, var(--roadmap-text));
-  color: var(--roadmap-text);
-  box-shadow: 0 10px 24px rgb(0 0 0 / 0.12);
-  cursor: pointer;
-}
-
-.theme-toggle:hover {
-  background: color-mix(in srgb, var(--roadmap-bg) 78%, var(--roadmap-text));
-}
-
-.theme-toggle svg {
-  width: 22px;
-  height: 22px;
 }
 
 .avatar-panel,
@@ -478,17 +423,29 @@ function iconName(icon: RoadmapIcon) {
   border-radius: 20px;
 }
 
-.icon-logo,
-.icon-emoji {
+.icon-logo {
   background: color-mix(in srgb, var(--icon-color) 9%, var(--roadmap-bg));
 }
 
-:global(.roadmap-dark .roadmap-icon:not(.icon-milestone)) {
+.icon-emoji {
+  border: 0;
+  border-radius: 10%;
+  background: var(--icon-color);
+  color: var(--icon-symbol-color);
+  box-shadow: 0 16px 36px var(--roadmap-icon-shadow);
+}
+
+.icon-emoji .roadmap-icon-symbol {
+  width: 54%;
+  height: 54%;
+}
+
+:global(.roadmap-dark .roadmap-icon:not(.icon-milestone):not(.icon-emoji)) {
   border-color: color-mix(in srgb, var(--icon-symbol-dark-color) 24%, transparent);
   background: var(--icon-bg-dark);
 }
 
-:global(.roadmap-dark .roadmap-icon:not(.icon-milestone) .roadmap-icon-symbol) {
+:global(.roadmap-dark .roadmap-icon:not(.icon-milestone):not(.icon-emoji) .roadmap-icon-symbol) {
   color: var(--icon-symbol-dark-color);
 }
 
