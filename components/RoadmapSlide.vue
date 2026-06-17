@@ -25,6 +25,30 @@ const slide = computed(() => {
   return found
 })
 
+function hexToRgb(color: string) {
+  const match = color.trim().match(/^#([\da-f]{3}|[\da-f]{6})$/i)
+  if (!match) return null
+
+  const normalized = match[1].length === 3
+      ? match[1].split('').map(value => value + value).join('')
+      : match[1]
+
+  return {
+    r: Number.parseInt(normalized.slice(0, 2), 16),
+    g: Number.parseInt(normalized.slice(2, 4), 16),
+    b: Number.parseInt(normalized.slice(4, 6), 16),
+  }
+}
+
+function isDarkColor(color?: string) {
+  if (!color) return false
+
+  const rgb = hexToRgb(color)
+  if (!rgb) return false
+
+  return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000 < 72
+}
+
 function setRoadmapTheme(theme: 'light' | 'dark') {
   isDarkTheme.value = theme === 'dark'
   document.documentElement.classList.toggle('roadmap-dark', isDarkTheme.value)
@@ -58,6 +82,8 @@ function blockStyle(block: RoadmapTextBlock) {
 
 function iconStyle(icon: RoadmapIcon) {
   const color = icon.color ?? '#111'
+  const symbolColor = icon.iconColor ?? color
+  const darkSymbolColor = isDarkColor(symbolColor) ? '#f7f8fb' : symbolColor
 
   return {
     left: xPct(icon.x ?? defaultIcon.x),
@@ -65,13 +91,20 @@ function iconStyle(icon: RoadmapIcon) {
     width: xPct(icon.w ?? defaultIcon.w),
     height: `${(icon.h ?? defaultIcon.h) / 10.8}%`,
     '--icon-color': color,
-    '--icon-symbol-color': icon.iconColor ?? color,
+    '--icon-symbol-color': symbolColor,
+    '--icon-symbol-dark-color': darkSymbolColor,
+    '--icon-bg-dark': isDarkColor(symbolColor)
+        ? 'rgb(247 248 251 / 0.12)'
+        : `color-mix(in srgb, ${color} 22%, var(--roadmap-bg))`,
   }
 }
 
 function accentStyle(block: RoadmapTextBlock) {
+  const accentColor = block.accent ?? '#555'
+
   return {
-    backgroundColor: block.accent ?? '#555',
+    '--accent-color': accentColor,
+    '--accent-dark-color': isDarkColor(accentColor) ? '#f7f8fb' : accentColor,
     '--accent-line-length': `${block.accentLength ?? 120}px`,
   }
 }
@@ -265,7 +298,7 @@ function iconName(icon: RoadmapIcon) {
 .avatar-icon {
   width: 54%;
   height: 54%;
-  color: var(--roadmap-text);
+  color: #050505;
 }
 
 .level-label {
@@ -334,6 +367,11 @@ function iconName(icon: RoadmapIcon) {
   position: absolute;
   width: 2px;
   height: var(--accent-line-length);
+  background: var(--accent-color, #555);
+}
+
+:global(.roadmap-dark .accent-line) {
+  background: var(--accent-dark-color, var(--accent-color, #555));
 }
 
 .accent-direction-down .accent-line {
@@ -443,6 +481,15 @@ function iconName(icon: RoadmapIcon) {
 .icon-logo,
 .icon-emoji {
   background: color-mix(in srgb, var(--icon-color) 9%, var(--roadmap-bg));
+}
+
+:global(.roadmap-dark .roadmap-icon:not(.icon-milestone)) {
+  border-color: color-mix(in srgb, var(--icon-symbol-dark-color) 24%, transparent);
+  background: var(--icon-bg-dark);
+}
+
+:global(.roadmap-dark .roadmap-icon:not(.icon-milestone) .roadmap-icon-symbol) {
+  color: var(--icon-symbol-dark-color);
 }
 
 .icon-milestone {

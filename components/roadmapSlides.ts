@@ -37,15 +37,13 @@ export type RoadmapSlideData = {
 export const roadmapSlides: RoadmapSlideData[] = [
   {
     id: 1,
-    avatar: '👨‍🚀',
-    avatarColor: '#ccfb50',
     path: 'M 250 515 C 370 455, 445 500, 520 615 C 575 700, 620 765, 660 795 C 780 890, 980 690, 1120 535 C 1235 410, 1290 255, 1370 150 C 1460 265, 1615 315, 1745 360 C 1845 395, 1915 405, 1980 420',
     icons: [
+      {label: 'Start', icon: 'fluent:rocket-16-regular', x: 100, y: 400, w: 300, h: 300, kind: 'emoji', color: '#b7df6a', iconColor: '#050505',},
       {label: 'HTML5', x: 590, y: 725, color: '#f05a28'},
       {label: 'CSS', x: 1300, y: 80, color: '#0478bd'},
     ],
     blocks: [
-      {title: 'Старт', x: 180, y: 270, w: 300, size: 'lg'},
       {
         title: 'Основы HTML',
         items: ['Что такое HTML', 'Структура HTML-документа', 'Семантическая верстка'],
@@ -597,7 +595,7 @@ export const roadmapSlides: RoadmapSlideData[] = [
     icons: [
       {label: 'Team', x: 150, y: 710, color: '#13c1eb'},
       {label: 'AI', x: 1260, y: 260, color: '#c505bc'},
-      {label: 'Finish', icon: 'ph:flag-checkered', x: 1573, y: 400, w: 300, h: 300, kind: 'milestone', color: '#ccfb50', iconColor: '#050505'},
+      {label: 'Finish', icon: 'ph:flag-checkered', x: 1573, y: 400, w: 300, h: 300, kind: 'emoji', color: '#b7df6a', iconColor: '#050505',},
     ],
     blocks: [
       {
