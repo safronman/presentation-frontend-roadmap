@@ -83,42 +83,58 @@ html:not(.roadmap-dark) .title-slide h1 {
 clicks: 1
 ---
 
-<HtmlCssRoadmap />
+<AnimatedRoadmapSlide :id="1" />
 
 ---
 clicks: 2
 ---
 
-<JsGitRoadmap />
+<AnimatedRoadmapSlide :id="2" />
 
 ---
-
-<RoadmapSlide :id="3" />
-
+clicks: 3
 ---
 
-<RoadmapSlide :id="4" />
+<AnimatedRoadmapSlide :id="3" />
 
 ---
-
-<RoadmapSlide :id="5" />
-
+clicks: 3
 ---
 
-<RoadmapSlide :id="6" />
+<AnimatedRoadmapSlide :id="4" />
 
 ---
-
-<RoadmapSlide :id="7" />
-
+clicks: 3
 ---
 
-<RoadmapSlide :id="8" />
+<AnimatedRoadmapSlide :id="5" />
 
 ---
-
-<RoadmapSlide :id="9" />
-
+clicks: 4
 ---
 
-<RoadmapSlide :id="10" />
+<AnimatedRoadmapSlide :id="6" />
+
+---
+clicks: 4
+---
+
+<AnimatedRoadmapSlide :id="7" />
+
+---
+clicks: 1
+---
+
+<AnimatedRoadmapSlide :id="8" />
+
+---
+clicks: 2
+---
+
+<AnimatedRoadmapSlide :id="9" />
+
+---
+clicks: 2
+---
+
+<AnimatedRoadmapSlide :id="10" />
