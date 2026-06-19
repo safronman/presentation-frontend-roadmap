@@ -65,8 +65,13 @@ const groups = computed(() => {
 })
 
 const step = computed(() => nav.clicks.value)
-const clipStart = computed(() => props.id === 1 ? 220 : -100)
+const clipStart = computed(() => -100)
 const visibleGroupIndex = computed(() => Math.min(step.value, groups.value.length - 1))
+const roadmapPath = computed(() => {
+  if (props.id !== 1) return slide.value.path
+
+  return `M -100 520 C 20 485, 105 575, 250 515 ${slide.value.path.replace(/^M\s*250\s+515\s*/i, '')}`
+})
 
 const currentLineTarget = computed(() => {
   return lineTargetFor(visibleGroupIndex.value)
@@ -311,13 +316,13 @@ function blockDelay(groupIndex: number, blockIndex: number) {
 
       <path
         class="path-segment"
-        :d="slide.path"
+        :d="roadmapPath"
         :clip-path="`url(#animated-roadmap-clip-${id})`"
       />
       <path
         v-if="isLastVisibleGroup"
         class="path-segment"
-        :d="slide.path"
+        :d="roadmapPath"
         :clip-path="`url(#animated-roadmap-final-clip-${id})`"
       />
     </svg>
@@ -424,6 +429,22 @@ function blockDelay(groupIndex: number, blockIndex: number) {
   stroke-width: 5;
   stroke-linecap: round;
   stroke-dasharray: 24 18;
+  animation: roadmap-line-pulse 2s ease-in-out infinite;
+}
+
+@keyframes roadmap-line-pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    stroke-width: 5;
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(10px);
+    stroke-width: 6.5;
+    opacity: 0.82;
+  }
 }
 
 .avatar-panel,

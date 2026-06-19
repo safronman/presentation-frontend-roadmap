@@ -16,14 +16,23 @@ transition: fade
   >
   <div class="title-slide-overlay"></div>
   <h1>Front-end roadmap 2026</h1>
+  <svg class="title-roadmap-line" viewBox="0 0 1920 1080" aria-hidden="true">
+    <defs>
+      <clipPath id="title-roadmap-line-clip">
+        <rect class="title-roadmap-line-reveal" x="40" y="240" width="0" height="430" />
+      </clipPath>
+    </defs>
+    <path
+      clip-path="url(#title-roadmap-line-clip)"
+      d="M 55 570 C 120 625, 190 625, 255 570 C 320 515, 385 515, 450 570 C 515 625, 585 625, 650 570 C 715 515, 780 515, 845 570 C 910 625, 980 625, 1045 570 C 1110 515, 1175 515, 1240 570 C 1305 625, 1375 625, 1440 570 C 1505 515, 1570 515, 1635 570 C 1700 625, 1770 625, 1835 570 C 1900 515, 1960 515, 2020 570"
+    />
+  </svg>
 </section>
 
 <style>
 .title-slide {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
   overflow: hidden;
   background: #0d1117;
 }
@@ -47,8 +56,11 @@ transition: fade
 }
 
 .title-slide h1 {
-  position: relative;
-  max-width: 900px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  z-index: 2;
+  width: min(900px, 92vw);
   margin: 0;
   color: #f7f8fb;
   font-family: Arial, Helvetica, sans-serif;
@@ -57,6 +69,46 @@ transition: fade
   line-height: 1.02;
   text-align: center;
   letter-spacing: 0;
+  transform: translateX(-50%);
+}
+
+.title-roadmap-line {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.title-roadmap-line path {
+  fill: none;
+  stroke: #7c3aed;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 24 18;
+  animation: title-line-wiggle 2s 4.9s ease-in-out infinite;
+}
+
+.title-roadmap-line-reveal {
+  animation: title-line-draw 4.4s 0.5s ease-in-out forwards;
+}
+
+@keyframes title-line-draw {
+  to {
+    width: 1980px;
+  }
+}
+
+@keyframes title-line-wiggle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 html:not(.roadmap-dark) .title-slide {
