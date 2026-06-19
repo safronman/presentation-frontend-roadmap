@@ -314,17 +314,26 @@ function blockDelay(groupIndex: number, blockIndex: number) {
         </clipPath>
       </defs>
 
-      <path
-        class="path-segment"
-        :d="roadmapPath"
-        :clip-path="`url(#animated-roadmap-clip-${id})`"
-      />
-      <path
-        v-if="isLastVisibleGroup"
-        class="path-segment"
-        :d="roadmapPath"
-        :clip-path="`url(#animated-roadmap-final-clip-${id})`"
-      />
+      <g class="path-pulse-group">
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 -2; 0 6; 0 -2"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+        <path
+          class="path-segment"
+          :d="roadmapPath"
+          :clip-path="`url(#animated-roadmap-clip-${id})`"
+        />
+        <path
+          v-if="isLastVisibleGroup"
+          class="path-segment"
+          :d="roadmapPath"
+          :clip-path="`url(#animated-roadmap-final-clip-${id})`"
+        />
+      </g>
     </svg>
 
     <div v-if="slide.avatar" class="avatar-panel" :style="{ backgroundColor: slide.avatarColor }">
@@ -429,22 +438,6 @@ function blockDelay(groupIndex: number, blockIndex: number) {
   stroke-width: 5;
   stroke-linecap: round;
   stroke-dasharray: 24 18;
-  animation: roadmap-line-pulse 2s ease-in-out infinite;
-}
-
-@keyframes roadmap-line-pulse {
-  0%,
-  100% {
-    transform: translateY(0);
-    stroke-width: 5;
-    opacity: 1;
-  }
-
-  50% {
-    transform: translateY(10px);
-    stroke-width: 6.5;
-    opacity: 0.82;
-  }
 }
 
 .avatar-panel,
