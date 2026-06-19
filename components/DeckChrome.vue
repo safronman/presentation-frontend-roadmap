@@ -45,7 +45,7 @@ onMounted(() => {
   position: fixed;
   top: 18px;
   right: 22px;
-  z-index: 100;
+  z-index: 10000;
   display: grid;
   width: 32px;
   height: 32px;
@@ -83,7 +83,7 @@ onMounted(() => {
   position: fixed;
   right: 22px;
   bottom: 16px;
-  z-index: 100;
+  z-index: 10000;
   min-width: 48px;
   padding: 5px 10px;
   border: 1px solid rgb(130 140 150 / 0.28);
