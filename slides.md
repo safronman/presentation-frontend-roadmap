@@ -80,12 +80,16 @@ html:not(.roadmap-dark) .title-slide h1 {
 </style>
 
 ---
-
-<RoadmapSlide :id="1" />
-
+clicks: 1
 ---
 
-<RoadmapSlide :id="2" />
+<HtmlCssRoadmap />
+
+---
+clicks: 2
+---
+
+<JsGitRoadmap />
 
 ---
 
